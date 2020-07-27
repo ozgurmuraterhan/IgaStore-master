@@ -898,4 +898,245 @@ $(document).ready(function () {
       $(".changeble").css('margin-bottom', '3px');
     }
   });
+
+
+
+  $.mobile.autoInitializePage = false;
+  $('.detailSlider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    nav: false,
+    dots: false,
+    asNavFor: '.detailSliderNav',
+    responsive: [{
+      breakpoint: 767,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '00px',
+        slidesToShow: 1,
+        dots: true,
+        nav: true
+      }
+    }]
+  });
+  $('.detailSliderNav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.detailSlider',
+    dots: false,
+    nav: false,
+    centerMode: true,
+    focusOnSelect: true,
+    responsive: [{
+      breakpoint: 1199,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '00px',
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 1152,
+      settings: {
+        arrows: false,
+        centerMode: false,
+        centerPadding: '00px',
+        slidesToShow: 2
+      }
+    }, {
+      breakpoint: 1025,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '00px',
+        slidesToShow: 3
+      }
+    }]
+  });
+  $('.dingleSlider').slick({
+    dots: false,
+    infinite: true,
+    arrows: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: false
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+
+
+  $(".sliderThumbnail").click(function () {
+    var thumbImage = $('img', this).attr("src");
+    $('.sliderMain > img').attr("src", thumbImage);
+    $(".sliderThumbnail.current").removeClass("current");
+    $(this).addClass("current");
+  });
+
+
+
+  $(".count-up").click(function () {
+    var number = parseInt($(".countNumber > span").text());
+    number = number + 1;
+    $(".countNumber > span").text(number++);
+  });
+  $(".count-down").click(function () {
+    var number = parseInt($(".countNumber > span").text());
+    if (number > 0) {
+      number = number - 1;
+      $(".countNumber > span").text(number);
+    }
+  });
+  $(document).ready(function () {
+    $(".sliderThumbnail").eq(0).addClass("current");
+
+  });
+
+  $("#btn-down").click(function () {
+    var lengthofthumbs = $(".sliderThumbnail").length;
+    parseInt(lengthofthumbs);
+    lengthofthumbs = lengthofthumbs - 1;
+    if ($(".sliderThumbnail").eq(lengthofthumbs).hasClass("current")) {
+    }
+    else {
+      // $('#thumbnailDiv').stop();
+      $('#thumbnailDiv').animate({ scrollTop: $('#thumbnailDiv').scrollTop() + 162 }, 500, 'swing');
+      var current = $(".sliderThumbnail.current");
+      $(".sliderThumbnail.current").next().addClass('current');
+      current.removeClass('current');
+      var srcCurrent = $("img", ".sliderThumbnail.current").attr("src")
+      $('.sliderMain > img').attr("src", srcCurrent);
+
+    }
+
+
+    // $(".sliderThumbnail.current").removeClass("current");
+
+  });
+  $("#btn-up").click(function () {
+    if ($(".sliderThumbnail").eq(0).hasClass("current")) {
+    }
+    else {
+      // $('#thumbnailDiv').stop();
+      $('#thumbnailDiv').animate({ scrollTop: $('#thumbnailDiv').scrollTop() - 162 }, 500, 'swing');
+      var current = $(".sliderThumbnail.current");
+      $(".sliderThumbnail.current").prev().addClass('current');
+      current.removeClass('current');
+      var srcCurrent = $("img", ".sliderThumbnail.current").attr("src")
+      $('.sliderMain > img').attr("src", srcCurrent);
+
+    }
+
+
+  });
+  // $("#thumbnailDiv").scroll(function(){
+  //   $('#thumbnailDiv').animate({scrollTop:$('#thumbnailDiv').scrollTop() - 162}, 500, 'swing');
+  // });
+  document.addEventListener('DOMContentLoaded', function () {
+    const ele = document.getElementById('thumbnailDiv');
+    ele.style.cursor = 'grab';
+
+    let pos = { top: 0, left: 0, x: 0, y: 0 };
+
+    const mouseDownHandler = function (e) {
+      ele.style.cursor = 'grabbing';
+      ele.style.userSelect = 'none';
+
+      pos = {
+        left: ele.scrollLeft,
+        top: ele.scrollTop,
+        // Get the current mouse position
+        x: e.clientX,
+        y: e.clientY,
+      };
+
+      document.addEventListener('mousemove', mouseMoveHandler);
+      document.addEventListener('mouseup', mouseUpHandler);
+    };
+
+    const mouseMoveHandler = function (e) {
+      // How far the mouse has been moved
+      // const dx = e.clientX - pos.x;
+      const dy = e.clientY - pos.y;
+
+      // Scroll the element
+      ele.scrollTop = pos.top - dy;
+      // ele.scrollLeft = pos.left - dx;
+    };
+
+    const mouseUpHandler = function () {
+      ele.style.cursor = 'grab';
+      ele.style.removeProperty('user-select');
+
+      document.removeEventListener('mousemove', mouseMoveHandler);
+      document.removeEventListener('mouseup', mouseUpHandler);
+    };
+
+    // Attach the handler
+    ele.addEventListener('mousedown', mouseDownHandler);
+  });
+
+  $(".sliderMain").on("swiperight", function (event) {
+    if ($(".sliderThumbnail").eq(0).hasClass("current")) {
+    }
+    else {
+      // $('#thumbnailDiv').stop();
+      $('#thumbnailDiv').animate({ scrollTop: $('#thumbnailDiv').scrollTop() - 162 }, 500, 'swing');
+      var current = $(".sliderThumbnail.current");
+      $(".sliderThumbnail.current").prev().addClass('current');
+      current.removeClass('current');
+      var srcCurrent = $("img", ".sliderThumbnail.current").attr("src")
+      $('.sliderMain > img').attr("src", srcCurrent);
+
+    }
+  });
+
+  $(".sliderMain").on("swipeleft", function (event) {
+    var lengthofthumbs = $(".sliderThumbnail").length;
+    parseInt(lengthofthumbs);
+    lengthofthumbs = lengthofthumbs - 1;
+    if ($(".sliderThumbnail").eq(lengthofthumbs).hasClass("current")) {
+    }
+    else {
+      // $('#thumbnailDiv').stop();
+      $('#thumbnailDiv').animate({ scrollTop: $('#thumbnailDiv').scrollTop() + 162 }, 500, 'swing');
+      var current = $(".sliderThumbnail.current");
+      $(".sliderThumbnail.current").next().addClass('current');
+      current.removeClass('current');
+      var srcCurrent = $("img", ".sliderThumbnail.current").attr("src")
+      $('.sliderMain > img').attr("src", srcCurrent);
+
+    }
+  });
+
 });
