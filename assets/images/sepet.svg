@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+    <g id="prefix__Group_3366" data-name="Group 3366" transform="translate(-384 -1271)">
+        <circle id="prefix__Ellipse_14" cx="17" cy="17" r="17" data-name="Ellipse 14" transform="translate(384 1271)" style="fill:#00bfd6"/>
+        <g id="prefix__Group_3365" data-name="Group 3365" transform="translate(392 1279)">
+            <path id="prefix__Path_1739" d="M51.213 41.022a.455.455 0 0 0-.475-.272H37.632l-.543-1.562a.818.818 0 0 0-.34-.34l-2.716-1.087a.683.683 0 0 0-.747.34.513.513 0 0 0 .34.747l2.445 1.019 2.988 8.692c-.136 0-.2.136-.272.272l-.887 2.377a.558.558 0 0 0 .068.475.484.484 0 0 0 .407.2h.475a1.59 1.59 0 0 0-.475 1.154 1.732 1.732 0 1 0 3.463 0 1.844 1.844 0 0 0-.407-1.154h3.8a1.926 1.926 0 0 0-.475 1.154 1.8 1.8 0 0 0 1.766 1.766 1.74 1.74 0 0 0 1.7-1.766 1.844 1.844 0 0 0-.407-1.154h1.969a.475.475 0 1 0 0-.951H39.058l.543-1.494h8.76a.516.516 0 0 0 .543-.407l2.445-7.531a.646.646 0 0 0-.136-.478z" data-name="Path 1739" transform="translate(-33.234 -37.745)" style="fill:#fff;fill-rule:evenodd"/>
+        </g>
+    </g>
+</svg>
