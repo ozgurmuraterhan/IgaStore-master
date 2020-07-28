@@ -227,7 +227,6 @@ $(document).ready(function () {
   });
 
 
-  $.mobile.autoInitializePage = false;
   $('.detailSlider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -466,7 +465,6 @@ $(document).ready(function () {
   });
 
 
-  $.mobile.autoInitializePage = false;
   $('.detailSlider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -901,7 +899,6 @@ $(document).ready(function () {
 
 
 
-  $.mobile.autoInitializePage = false;
   $('.detailSlider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
