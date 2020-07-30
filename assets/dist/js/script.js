@@ -1136,4 +1136,11 @@ $(document).ready(function () {
     }
   });
 
+
+  $('#openMobileCategoryTab').on('click', () => {
+    $('.mobile-fixed-category-menu-div').toggle()
+  })
+
+
 });
+

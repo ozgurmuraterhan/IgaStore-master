@@ -2097,7 +2097,17 @@ body {
   }
 
 
- 
+ .mobile-fixed-category-menu-div{
+  position: fixed; 
+  left:0; 
+  right:0; 
+  top:0; 
+  bottom:0; 
+  background: #fff; 
+  z-index: 8; 
+  padding: 15px;
+  display: none;
+ }
 
   .mobile-bottom-all-div{
    display:none
@@ -2114,7 +2124,26 @@ body {
     color:#fff
   }
 
- 
+  ul.mobile-bottom-menu-ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  ul.mobile-bottom-menu-ul li {
+    padding: 20px 0px 20px 0px;
+  }
+
+  ul.mobile-bottom-menu-ul li .fa-chevron-right {
+    float: right
+  }
+
+  ul.mobile-bottom-menu-ul li img {
+    width: 55px;
+    float: left;
+    margin-top: -15px;
+    margin-right: 10px;
+  }
 
 @media screen and (max-width: 768px) {
 
