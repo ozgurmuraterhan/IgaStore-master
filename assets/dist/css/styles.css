@@ -70,19 +70,27 @@
       width: 100px;
       height: 35px;
       text-align: center; }
-    .mobileMenu .topSection .lefticon a img {
+    .mobileMenu .topSection .lefticon a .icon {
       border: solid 1px rgba(255, 255, 255, 0.25);
-      border-radius: 25px;
-      padding: 10px;
-      margin: 0px 0px 0px 10px; }
+      border-radius: 50%;
+      padding: 4px 8px;
+      color: #07bfd6;
+      font-size: 8pt;}
     .mobileMenu .topSection .lefticon a .icon {
       margin-right: 15px; }
     .mobileMenu .topSection .righticon {
       text-align: right; }
-      .mobileMenu .topSection .righticon a img {
-        border: solid 1px rgba(255, 255, 255, 0.25);
-        border-radius: 25px;
-        padding: 10px; }
+      
+    .mobileMenu .topSection .righticon a .icon {
+      border: solid 1px rgba(255, 255, 255, 0.25);
+      border-radius: 50%;
+      padding: 4px 8px;
+      color: #07bfd6;
+      font-size: 8pt;
+      
+  }
+
+
       .mobileMenu .topSection .righticon a .icon {
         margin-right: 6px; }
   .mobileMenu .midSection {
@@ -203,8 +211,12 @@
   letter-spacing: 0.48px;
   color: #ffffff; }
 
-.dropdownCategoryMenu {
-  width: 100%; }
+
+ 
+
+
+  .dropdownCategoryMenu {
+    width: 100%; }
   .dropdownCategoryMenu.dropdown-menu {
     left: unset;
     margin: 0px; }
@@ -369,11 +381,16 @@ header .categoryDiv {
     color: #ffffff;
     background-color: #00bfd6;
     border-radius: 0 !important; }
-    header .categoryDiv .categoryBtn:after {
-      content: url("../../images/menuIcon.svg");
+ 
+
+    header .categoryDiv .categoryBtn .fa-bars {
       float: right;
-      padding-left: 1em;
-      border: none; }
+      font-size: 16pt;
+     }
+
+     header .categoryDiv .categoryBtn:after {
+      display:none
+     }
   header .categoryDiv .journeyType .journeyBtn {
     -webkit-backdrop-filter: blur(7.6px);
     backdrop-filter: blur(7.6px);
@@ -392,10 +409,13 @@ header .categoryDiv {
     float: right;
     border-radius: 0px; }
     header .categoryDiv .journeyType .journeyBtn:after {
-      content: url("../../images/caretDown.svg");
-      float: right;
-      padding-left: 1em;
-      border: none; }
+      display:none
+     }
+
+     header .categoryDiv .journeyType .journeyBtn .fa-angle-down{
+       font-size: 16pt;
+       float: right;
+     }
   header .categoryDiv .others {
     padding-left: 30px; }
     header .categoryDiv .others span {
@@ -415,10 +435,11 @@ header .middleArea {
 
 header .logoDiv {
   padding-top: 16.8px; }
-  header .logoDiv a img {
+  header .logoDiv a .icon {
     border: solid 1px rgba(255, 255, 255, 0.25);
-    border-radius: 25px;
-    padding: 10px; }
+    border-radius:50%;
+    padding: 6px 10px;
+   color:#07bfd6 }
   header .logoDiv a .icon {
     margin-right: 15px; }
   header .logoDiv a .top {
@@ -2076,8 +2097,52 @@ body {
   }
 
 
-  
+ 
+
+  .mobile-bottom-all-div{
+   display:none
+  }
+
+  .footerSocialIcons{
+    font-size: 16pt;
+ 
+  }
+
+  .footerSocialIcons a{     
+    
+    margin-right: 30px;
+    color:#fff
+  }
+
+ 
+
 @media screen and (max-width: 768px) {
+
+
+  .mobile-bottom-all-div{
+    display:block;
+    background: #404040; 
+    box-shadow: 0px 17px 20px 8px #000;
+  }
+
+  .mobilBottomLink{
+    color:#fff;
+    padding-top: 5px;
+    
+  }
+  .mobilBottomLink:hover{
+    color:#07bfd6;
+    
+  }
+
+  .mobilBottomLink span{
+    font-size: 9pt;
+    width: 100%;
+    float: left;
+    
+  }
+
+
   #productDetailContent #nav-tab a {
     font-size: 10px; }
   #productDetailContent #btn-up {

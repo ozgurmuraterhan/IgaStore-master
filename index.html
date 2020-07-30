@@ -5,32 +5,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IgaStore</title>
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/dist/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="assets/dist/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="assets/dist/slick/slick-theme.css" />
   <link rel="stylesheet" href="assets/dist/css/styles.css">
 
-
-
 </head>
 
 <body>
+  <div class="position-fixed fixed-bottom text-center mobile-bottom-all-div">
+    <div class="row">
+      <a href="#" class="col mobilBottomLink">
+        <i class="fas fa-globe"></i>
+        <span> Keşfet</span>
+      </a>
+      <a href="#" onClick="openModalCategory" class="col mobilBottomLink">
+        <i class="fa fa-list-alt"></i>
+        <span> Kategori</span>
+      </a>
+      <a href="#" class="col mobilBottomLink">
+        <i class="fas fa-vote-yea"></i>
+        <span> Sparişler</span>
+      </a>
+      <a href="#" class="col mobilBottomLink">
+        <i class="fas fa-user"></i>
+        <span>Profil</span>
+      </a>
+    </div>
+  </div>
+
+  <div style="position: fixed; left:0; right:0; top:0; bottom:0; background: #fff; z-index: 8; padding: 15px;">
+    <h1></h1>
+
+  </div>
+
+
   <section>
     <header>
       <div class="mobileMenu d-block d-lg-none">
         <div class="row d-flex align-items-center topSection mx-0">
           <div class="col-4 lefticon pr-0">
             <a href="javascript:void(0)">
-              <div class="icon float-left"><img src="assets/images/avatar.svg"></div>
+              <div class="icon float-left">
+                <i class="fas fa-user"></i>
+              </div>
             </a>
           </div>
           <div class="col-4 px-0 mobileLogo"><img src="assets/images/IGA_Store_Logo.svg" /></div>
           <div class="col-4 text-right righticon">
             <a href="javascript:void(0)">
-              <div class="icon float-right"><img src="assets/images/love.svg"></div>
+              <div class="icon float-right">
+                <i class="fas fa-heart"></i>
+              </div>
             </a>
             <a href="javascript:void(0)">
-              <div class="icon float-right"><img src="assets/images/cart.svg"></div>
+              <div class="icon float-right">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
             </a>
           </div>
         </div>
@@ -45,14 +76,35 @@
           </div>
         </div>
         <div class="botSection row mx-0">
-          <div class="col-6 px-0">
-            <button class="btn categoryMobileButton btn-block">ALL CATEGORIES</button>
+          <!--<div class="col-6 px-0">
+            <a class="btn categoryMobileButton btn-block" href="#" id="navbarDropdownMobile" role="button" data-toggle="dropdown"> ALL CATEGORIES </a>
+            <div class="dropdown-menu categoryMobileDropdown visible-xs"  style="width: 204%; padding-left:15px ;transform:none" aria-labelledby="navbarDropdownMobile">
+              <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="foodstab" data-toggle="pill" href="#foods" role="tab"
+                  aria-controls="v-pills-home" aria-selected="true">Foods</a>
+                <a class="nav-link" id="fashiontab" data-toggle="pill" href="#fashion" role="tab"
+                  aria-controls="v-pills-profile" aria-selected="false">Fashion</a>
+                <a class="nav-link" id="bagstab" data-toggle="pill" href="#bags" role="tab"
+                  aria-controls="v-pills-messages" aria-selected="false">Bags & Luggage</a>
+                <a class="nav-link" id="accessoriestab" data-toggle="pill" href="#accessories" role="tab"
+                  aria-controls="v-pills-settings" aria-selected="false">Accessories</a>
+                <a class="nav-link " id="gifttab" data-toggle="pill" href="#gift" role="tab"
+                  aria-controls="v-pills-home" aria-selected="true">Turkish Products, Gift & Souvenirs</a>
+                <a class="nav-link" id="gamestab" data-toggle="pill" href="#games" role="tab"
+                  aria-controls="v-pills-profile" aria-selected="false">Toys, Games, Books, Writing Utensils</a>
+                <a class="nav-link" id="beautytab" data-toggle="pill" href="#beauty" role="tab"
+                  aria-controls="v-pills-messages" aria-selected="false">Beauty & Health</a>
+                <a class="nav-link" id="electronicstab" data-toggle="pill" href="#electronics" role="tab"
+                  aria-controls="v-pills-settings" aria-selected="false">Electronics</a>
+              </div>
+            </div>
           </div>
-          <div class="col-6  px-0">
-            <button class="btn  btn-block journeyMobileButton">JOURNEY TYPE</button>
-          </div>
+          <div class="col-6  px-0">-->
+          <button class="btn  btn-block journeyMobileButton">JOURNEY TYPE</button>
         </div>
       </div>
+      </div>
+
       <div class="mainContainer d-none d-lg-block">
         <div class="container">
           <div class="supportDiv row">
@@ -101,7 +153,9 @@
                   <div class="row ">
                     <div class="col-md-4 ">
                       <a href="javascript:void(0)">
-                        <div class="icon float-left"><img src="assets/images/avatar.svg"></div>
+                        <div class="icon float-left">
+                          <i class="fas fa-user"></i>
+                        </div>
                         <div>
                           <div class="top">Hello, Sign In</div>
                           <div class="sub">Your Account</div>
@@ -110,7 +164,9 @@
                     </div>
                     <div class="col-md-4 ">
                       <a href="javascript:void(0)">
-                        <div class="icon float-left"><img src="assets/images/love.svg"></div>
+                        <div class="icon float-left">
+                          <i class="fas fa-heart"></i>
+                        </div>
                         <div>
                           <div class="top">Favourites</div>
                           <div class="sub">2 Items</div>
@@ -119,7 +175,9 @@
                     </div>
                     <div class="col-md-4 pl-0">
                       <a href="javascript:void(0)">
-                        <div class="icon float-left"><img src="assets/images/cart.svg"></div>
+                        <div class="icon float-left">
+                          <i class="fas fa-shopping-cart"></i>
+                        </div>
                         <div>
                           <div class="top">My Basket</div>
                           <div class="sub">0 Items - $0.00</div>
@@ -143,6 +201,8 @@
                       type="button" id="dropdownCategory" data-target="#dropdownCategoryMenu" aria-haspopup="true"
                       aria-expanded="false">
                       ALL CATEGORİES
+
+                      <i class="fas fa-bars"></i>
                     </button>
                   </div>
                 </div>
@@ -158,6 +218,7 @@
                       type="button" data-target="#dropdownJourneyMenu" aria-haspopup="true" aria-expanded="false"
                       id="dropdownJourneyBtn">
                       JOURNEY TYPE
+                      <i class="fas fa-angle-down"></i>
                     </button>
                   </div>
                 </div>
@@ -1630,7 +1691,7 @@
 
   </section>
   <!-- Footer -->
-  <section class="footer d-none d-lg-block">
+  <section class="footer d-none d-lg-block  ">
     <div class="container">
       <div class="row info">
         <div class="col-md-3">
@@ -1686,12 +1747,12 @@
             </div>
           </form>
         </div>
-        <div class="col-md-3 px-0">
-          <span class=''><img src="assets/images/facebook.svg"></span>
-          <span class=''><img src="assets/images/twitter.svg"></span>
-          <span class=''><img src="assets/images/instagram.svg"></span>
-          <span class=''><img src="assets/images/pinterest.svg"></span>
-          <span class=''><img src="assets/images/youtube.svg"></span>
+        <div class="col-md-3 px-0 footerSocialIcons">
+          <a href="#" class=''><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class=''><i class="fab fa-twitter"></i></a>
+          <a href="#" class=''><i class="fab fa-instagram"></i></a>
+          <a href="#" class=''> <i class="fab fa-pinterest"></i></a>
+          <a href="#" class=''><i class="fab fa-youtube"></i></a>
 
         </div>
       </div>
@@ -1701,7 +1762,7 @@
     </div>
   </section>
   <section>
-    <div class="d-block d-md-none flex-column" style="background-color: #15243a;">
+    <div class="d-block d-lg-none flex-column" style="background-color: #15243a;">
       <div class="d-flex flex-column">
         <div class="collapse_footer d-flex flex-row " style="height: 52px;" data-toggle="collapse" href="#aboutUs"
           role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -1765,7 +1826,7 @@
             alt='' style="height: 35px; width: 100px;margin-top: 30px;"></div>
         <div class="d-flex justify-content-center">
           <form class=" ">
-            <div class="input-group " style="width:350px">
+            <div class="input-group " style="width:300px">
               <input type="text" class="form-control w-80" placeholder="Enter Your Email Address"
                 aria-label="Recipient's username" aria-describedby="basic-addon2">
               <div class="input-group-append">
@@ -1779,12 +1840,12 @@
         </div>
 
 
-        <div class="footer-mobile-social d-flex justify-content-center">
-          <div><img class="facebook-1" src="assets/images/facebook.svg"></div>
-          <div><img class="twitter" src="assets/images/twitter.svg"></div>
-          <div><img class="instagram" src="assets/images/instagram.svg"></div>
-          <div><img class="pinterest" src="assets/images/pinterest.svg"></div>
-          <div><img class="youtube" src="assets/images/youtube.png"></div>
+        <div class="footer-mobile-social d-flex justify-content-center footerSocialIcons">
+          <a href="#" class=''><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class=''><i class="fab fa-twitter"></i></a>
+          <a href="#" class=''><i class="fab fa-instagram"></i></a>
+          <a href="#" class=''> <i class="fab fa-pinterest"></i></a>
+          <a href="#" class=''><i class="fab fa-youtube"></i></a>
         </div>
 
 
@@ -1800,12 +1861,10 @@
 
 </body>
 
-<script src="node_modules/jquery/dist/jquery.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.rawgit.com/tonystar/bootstrap-hover-tabs/v3.1.1/bootstrap-hover-tabs.js"></script>
+<script src="assets/dist/js/jquery.js"></script>
+<script src="assets/dist/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="assets/dist/slick/slick.min.js"></script>
 <script src="assets/dist/css/fontawesome/js/all.js"></script>
-
 <script src="assets/dist/js/script.js"></script>
 
 </html>
