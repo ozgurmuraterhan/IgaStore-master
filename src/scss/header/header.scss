@@ -551,6 +551,69 @@ header {
     }
 }
 
+header {
+    .mainContainerdetail {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        z-index: 2;
+        min-height: 175px;
+        background: #15243a;
+    }
+}
+
+.mobile-fixed-category-menu-div {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 8;
+    padding: 15px;
+    display: none;
+}
+
+.footerSocialIcons {
+    font-size: 16pt;
+    a {
+        margin-right: 30px;
+        color: #fff;
+    }
+}
+
+.mobile-bottom-menu-ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+        padding: 20px 0px 20px 0px;
+        .fa-chevron-right {
+            float: right;
+        }
+    }
+    img {
+        width: 55px;
+        float: left;
+        margin-top: -15px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 1322px) {
+    header {
+        .mainContainerdetail {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width: 100%;
+            z-index: 2;
+            min-height: 209px;
+            background: #15243a;
+        }
+    }
+}
 @media screen and (max-width: 768px) {
     .mainBanner {
         .slick-slide {
@@ -610,55 +673,5 @@ header {
                 font-size: 10px;
             }
         }
-    }
-}
-
-header {
-    .mainContainerdetail {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        width: 100%;
-        z-index: 2;
-        min-height: 173px;
-        background: #15243a;
-    }
-}
-
-.mobile-fixed-category-menu-div {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: #fff;
-    z-index: 8;
-    padding: 15px;
-    display: none;
-}
-
-.footerSocialIcons {
-    font-size: 16pt;
-    a {
-        margin-right: 30px;
-        color: #fff;
-    }
-}
-
-.mobile-bottom-menu-ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    li {
-        padding: 20px 0px 20px 0px;
-        .fa-chevron-right {
-            float: right;
-        }
-    }
-    img {
-        width: 55px;
-        float: left;
-        margin-top: -15px;
-        margin-right: 10px;
     }
 }

@@ -1424,7 +1424,7 @@ body {
 
 #productDetailContent .sliderMain {
   height: 466px;
-  width: 450px;
+  width: 100%;
   border: #c9c9c9 solid 0.5px;
   border-radius: 5px;
   padding: 38px 85px; }
@@ -1533,64 +1533,6 @@ body {
     justify-content: space-between; }
   #productDetailContent .glowyelement span {
     font-size: 12px !important; } }
-
-@import url(/assets/dist/css/font/stylesheet.css);
-.footer {
-  padding-top: 40px;
-  background-color: #15243a; }
-  .footer .info {
-    padding-bottom: 30px; }
-    .footer .info .title {
-      font-size: 18px;
-      font-weight: bold;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.22;
-      letter-spacing: 0.54px;
-      text-align: left;
-      color: #ffffff;
-      margin-bottom: 35px; }
-    .footer .info .subtitle {
-      font-size: 14px;
-      font-weight: normal;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 2.5;
-      letter-spacing: 0.42px;
-      text-align: left;
-      color: #ffffff; }
-  .footer .bottom {
-    margin: 37px 0px 35px 0px; }
-    .footer .bottom span {
-      margin-right: 30px; }
-    .footer .bottom form input {
-      height: 36px; }
-    .footer .bottom form .input-group-append {
-      width: 30%; }
-    .footer .bottom form button {
-      height: 36px;
-      background-color: #00bfd6;
-      font-family: Avenir;
-      font-size: 14px;
-      font-weight: 900;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.57;
-      letter-spacing: normal;
-      text-align: left;
-      color: #ffffff;
-      border: 0px; }
-  .footer .copyrights {
-    padding-bottom: 37px; }
-    .footer .copyrights span {
-      font-size: 10px;
-      font-weight: normal;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.1;
-      letter-spacing: 0.3px;
-      text-align: left;
-      color: #ffffff; }
 
 @import url(/assets/dist/css/font/stylesheet.css);
 .mobile-fixed-category-menu-div {
@@ -2040,42 +1982,13 @@ header form {
     color: #ffffff;
     border: 0px; }
 
-@media screen and (max-width: 768px) {
-  .mainBanner .slick-slide img {
-    height: unset; }
-  .mobile-bottom-all-div {
-    display: block;
-    background: #404040;
-    box-shadow: 0px 17px 20px 8px #000; }
-  .mobilBottomLink {
-    color: #fff;
-    padding-top: 5px; }
-    .mobilBottomLink span {
-      font-size: 9pt;
-      width: 100%;
-      float: left; }
-  .mobilBottomLink:hover {
-    color: #07bfd6; } }
-
-@media screen and (min-width: 320px) and (max-width: 576px) {
-  .topSection .lefticon a img {
-    padding: 6px !important; }
-  .topSection .righticon a img {
-    padding: 6px !important; }
-  .mobileMenu .midSection .outside {
-    font-size: 14px; }
-  .mobileMenu .botSection .categoryMobileButton {
-    font-size: 10px; }
-  .mobileMenu .botSection .journeyMobileButton {
-    font-size: 10px; } }
-
 header .mainContainerdetail {
   display: flex;
   flex-direction: column;
   position: relative;
   width: 100%;
   z-index: 2;
-  min-height: 173px;
+  min-height: 175px;
   background: #15243a; }
 
 .mobile-fixed-category-menu-div {
@@ -2108,3 +2021,100 @@ header .mainContainerdetail {
     float: left;
     margin-top: -15px;
     margin-right: 10px; }
+
+@media screen and (max-width: 1322px) {
+  header .mainContainerdetail {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    min-height: 209px;
+    background: #15243a; } }
+
+@media screen and (max-width: 768px) {
+  .mainBanner .slick-slide img {
+    height: unset; }
+  .mobile-bottom-all-div {
+    display: block;
+    background: #404040;
+    box-shadow: 0px 17px 20px 8px #000; }
+  .mobilBottomLink {
+    color: #fff;
+    padding-top: 5px; }
+    .mobilBottomLink span {
+      font-size: 9pt;
+      width: 100%;
+      float: left; }
+  .mobilBottomLink:hover {
+    color: #07bfd6; } }
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .topSection .lefticon a img {
+    padding: 6px !important; }
+  .topSection .righticon a img {
+    padding: 6px !important; }
+  .mobileMenu .midSection .outside {
+    font-size: 14px; }
+  .mobileMenu .botSection .categoryMobileButton {
+    font-size: 10px; }
+  .mobileMenu .botSection .journeyMobileButton {
+    font-size: 10px; } }
+
+@import url(/assets/dist/css/font/stylesheet.css);
+.footer {
+  padding-top: 40px;
+  background-color: #15243a; }
+  .footer .info {
+    padding-bottom: 30px; }
+    .footer .info .title {
+      font-size: 18px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.22;
+      letter-spacing: 0.54px;
+      text-align: left;
+      color: #ffffff;
+      margin-bottom: 35px; }
+    .footer .info .subtitle {
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 2.5;
+      letter-spacing: 0.42px;
+      text-align: left;
+      color: #ffffff; }
+  .footer .bottom {
+    margin: 37px 0px 35px 0px; }
+    .footer .bottom span {
+      margin-right: 30px; }
+    .footer .bottom form input {
+      height: 36px; }
+    .footer .bottom form .input-group-append {
+      width: 30%; }
+    .footer .bottom form button {
+      height: 36px;
+      background-color: #00bfd6;
+      font-family: Avenir;
+      font-size: 14px;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.57;
+      letter-spacing: normal;
+      text-align: left;
+      color: #ffffff;
+      border: 0px; }
+  .footer .copyrights {
+    padding-bottom: 37px; }
+    .footer .copyrights span {
+      font-size: 10px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.1;
+      letter-spacing: 0.3px;
+      text-align: left;
+      color: #ffffff; }
