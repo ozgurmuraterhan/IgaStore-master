@@ -19,9 +19,7 @@
         "gulp-uglify-es": "^2.0.0"
     },
     "scripts": {
-        "test": "echo \"Test\"",
-        "run": "gulp dev",
-        "prod": "gulp prod"
+        "test": "echo \"Test\""
     },
     "repository": {
         "type": "git"
