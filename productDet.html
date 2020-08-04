@@ -19,6 +19,45 @@
 </style>
 
 <body>
+
+  <div class="position-fixed fixed-bottom text-center mobile-bottom-all-div">
+    <div class="row">
+      <a href="#" id="openMobileCategoryTab" class="col mobilBottomLink">
+        <i class="fas fa-globe"></i>
+        <span> Keşfet</span>
+      </a>
+      <a href="#" onClick="openModalCategory" class="col mobilBottomLink">
+        <i class="fa fa-list-alt"></i>
+        <span> Kategori</span>
+      </a>
+      <a href="#" class="col mobilBottomLink">
+        <i class="fas fa-vote-yea"></i>
+        <span> Sparişler</span>
+      </a>
+      <a href="#" class="col mobilBottomLink">
+        <i class="fas fa-user"></i>
+        <span>Profil</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="mobile-fixed-category-menu-div">
+    <h1>KATEGORİLER</h1>
+    <ul class="mobile-bottom-menu-ul">
+      <li><img src="assets/images/pc.png"> Elektronik <i class="fas fa-chevron-right"></i> </li>
+      <li><img src="assets/images/pc.png"> Moda <i class="fas fa-chevron-right"></i></li>
+      <li><img src="assets/images/pc.png"> Ev, Yaşam, Kırtasiye, Ofis <i class="fas fa-chevron-right"></i></li>
+      <li><img src="assets/images/pc.png"> Oto, Bahçe, Yapı Market <i class="fas fa-chevron-right"></i></li>
+      <li><img src="assets/images/pc.png"> Anne, Bebek, Oyuncak <i class="fas fa-chevron-right"></i></li>
+      <li><img src="assets/images/pc.png"> Spor, Outdoor <i class="fas fa-chevron-right"></i></li>
+      <li><img src="assets/images/pc.png"> Kozmetik, Kişisel Bakım <i class="fas fa-chevron-right"></i></li>
+      <li><img src="assets/images/pc.png"> Süpermarket, Pet Shop <i class="fas fa-chevron-right"></i></li>
+      <li><img src="assets/images/pc.png"> Kitap, Müzik, Film, Hobi <i class="fas fa-chevron-right"></i></li>
+    </ul>
+  </div>
+
+
+
   <section>
     <header>
       <div class="mobileMenu d-block d-lg-none">
@@ -105,7 +144,9 @@
                   <div class="row ">
                     <div class="col-md-4 ">
                       <a href="javascript:void(0)">
-                        <div class="icon float-left"><img src="assets/images/avatar.svg"></div>
+                        <div class="icon float-left">
+                          <i class="fas fa-user"></i>
+                        </div>
                         <div>
                           <div class="top">Hello, Sign In</div>
                           <div class="sub">Your Account</div>
@@ -114,7 +155,9 @@
                     </div>
                     <div class="col-md-4 ">
                       <a href="javascript:void(0)">
-                        <div class="icon float-left"><img src="assets/images/love.svg"></div>
+                        <div class="icon float-left">
+                          <i class="fas fa-heart"></i>
+                        </div>
                         <div>
                           <div class="top">Favourites</div>
                           <div class="sub">2 Items</div>
@@ -123,7 +166,9 @@
                     </div>
                     <div class="col-md-4 pl-0">
                       <a href="javascript:void(0)">
-                        <div class="icon float-left"><img src="assets/images/cart.svg"></div>
+                        <div class="icon float-left">
+                          <i class="fas fa-shopping-cart"></i>
+                        </div>
                         <div>
                           <div class="top">My Basket</div>
                           <div class="sub">0 Items - $0.00</div>
