@@ -1,5 +1,7 @@
 $brand: #00bfd6;
-
+html {
+    overflow-x: hidden;
+}
 :focus {
     outline: none;
 }
@@ -206,6 +208,10 @@ $brand: #00bfd6;
 .slick-slide img {
     display: block;
     height: 200px;
+}
+
+.slick-list {
+    padding: 0 !important;
 }
 .doubleBanner {
     .bannerContainer {
@@ -479,10 +485,10 @@ $brand: #00bfd6;
                 .filter {
                     a {
                         text-decoration: none;
-                        color: unset;
+                        color: #000;
                     }
                     float: left;
-
+                    width: 100%;
                     font-size: 16px;
                     font-weight: normal;
                     font-stretch: normal;
@@ -613,22 +619,35 @@ $brand: #00bfd6;
                 }
             }
             .slick-next {
-                top: -44px !important;
-                right: 230px !important;
+                top: -50px !important;
+                right: 240px !important;
                 &:before {
                     font-size: 29px !important;
                     content: url("../../images/caretRight.png") !important;
                 }
             }
             .slick-prev {
-                top: -44px !important;
-                right: 290px !important;
+                top: -50px !important;
+                right: 280px !important;
                 left: unset !important;
                 &:before {
                     font-size: 29px !important;
                     content: url("../../images/caretLeft.png") !important;
                 }
             }
+
+            @media screen and (max-width: 1260px) {
+                .slick-next {
+                    top: -50px !important;
+                    right: 190px !important;
+                }
+                .slick-prev {
+                    top: -50px !important;
+                    right: 225px !important;
+                    left: unset !important;
+                }
+            }
+
             .slick-dots {
                 bottom: -22px !important;
                 li {
@@ -763,6 +782,7 @@ body {
     /* align horizontal */
     align-self: flex-end; /* align vertical */
 }
+
 @media screen and (max-width: 768px) {
     .categorySliderContainer {
         .doubleCategory {
@@ -970,5 +990,21 @@ body {
     &:hover {
         transition-duration: 0.5s;
         transform: scale(1.3);
+    }
+}
+.singles1 {
+    .slick-next {
+        &:before {
+            position: fixed;
+            right: 10px;
+        }
+    }
+}
+.singles1 {
+    .slick-prev {
+        &:before {
+            position: fixed;
+            left: 10px;
+        }
     }
 }

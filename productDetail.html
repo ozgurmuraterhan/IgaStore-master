@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
       <meta charset="UTF-8">
       <title>Iga</title>
       <link rel="stylesheet" href="assets/dist/bootstrap/css/bootstrap.css">
       <link rel="stylesheet" type="text/css" href="assets/dist/slick/slick.css" />
       <link rel="stylesheet" type="text/css" href="assets/dist/slick/slick-theme.css" />
       <link rel="stylesheet" href="assets/dist/css/styles.css">
-    
-   </head> 
+   </head>
    <body>
       <div class="position-fixed fixed-bottom text-center mobile-bottom-all-div">
          <div class="row">
@@ -31,6 +32,9 @@
          </div>
       </div>
       <div class="mobile-fixed-category-menu-div">
+         <a href="javascript:;" title="Close" id="closeMobileAllDiv">
+         <i class="fas fa-times"></i>
+         </a>
          <h1>KATEGORİLER</h1>
          <ul class="mobile-bottom-menu-ul">
             <li><img src="assets/images/pc.png"> Elektronik <i class="fas fa-chevron-right"></i> </li>
@@ -80,35 +84,45 @@
                   </div>
                </div>
                <div class="botSection row mx-0">
-                  <!--<div class="col-6 px-0">
-                     <a class="btn categoryMobileButton btn-block" href="#" id="navbarDropdownMobile" role="button" data-toggle="dropdown"> ALL CATEGORIES </a>
-                     <div class="dropdown-menu categoryMobileDropdown visible-xs"  style="width: 204%; padding-left:15px ;transform:none" aria-labelledby="navbarDropdownMobile">
-                       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                         <a class="nav-link active" id="foodstab" data-toggle="pill" href="#foods" role="tab"
-                           aria-controls="v-pills-home" aria-selected="true">Foods</a>
-                         <a class="nav-link" id="fashiontab" data-toggle="pill" href="#fashion" role="tab"
-                           aria-controls="v-pills-profile" aria-selected="false">Fashion</a>
-                         <a class="nav-link" id="bagstab" data-toggle="pill" href="#bags" role="tab"
-                           aria-controls="v-pills-messages" aria-selected="false">Bags & Luggage</a>
-                         <a class="nav-link" id="accessoriestab" data-toggle="pill" href="#accessories" role="tab"
-                           aria-controls="v-pills-settings" aria-selected="false">Accessories</a>
-                         <a class="nav-link " id="gifttab" data-toggle="pill" href="#gift" role="tab"
-                           aria-controls="v-pills-home" aria-selected="true">Turkish Products, Gift & Souvenirs</a>
-                         <a class="nav-link" id="gamestab" data-toggle="pill" href="#games" role="tab"
-                           aria-controls="v-pills-profile" aria-selected="false">Toys, Games, Books, Writing Utensils</a>
-                         <a class="nav-link" id="beautytab" data-toggle="pill" href="#beauty" role="tab"
-                           aria-controls="v-pills-messages" aria-selected="false">Beauty & Health</a>
-                         <a class="nav-link" id="electronicstab" data-toggle="pill" href="#electronics" role="tab"
-                           aria-controls="v-pills-settings" aria-selected="false">Electronics</a>
-                       </div>
+                  <button class="btn  btn-block journeyMobileButton" data-toggle="collapse"
+                     type="button" data-target="#dropdownJourneyMenuMobile" aria-haspopup="true" aria-expanded="false"
+                     id="dropdownJourneyBtn">
+                  JOURNEY TYPE
+                   </button>
+                  <div class="dropdown-menu  container  dropdownMenu " id="dropdownJourneyMenuMobile"
+                     aria-labelledby="dropdownJourney">
+                     <div class="row justify-content-center text-center">
+                        <div class="col-6">
+                           <div class="icon"><img src="assets/images/business_icon.svg" alt='' width="34.6" height="34.6"></div>
+                           <div class="text">
+                              BUSINESS
+                           </div>
+                        </div>
+                        <div class="col-6">
+                           <div class="icon"><img src="assets/images/family_icon.svg" alt='' width="34.6" height="34.6"></div>
+                           <div class="text">
+                              FAMILY
+                           </div>
+                        </div>
+                        <div class="col-6">
+                           <div class="icon"><img src="assets/images/traveller.svg" alt='' width="34.6" height="34.6"></div>
+                           <div class="text">
+                              TRAVELER
+                           </div>
+                        </div>
+                        <div class="col-6">
+                           <div class="icon"><img src="assets/images/transfer_icon.svg" alt='' width="34.6" height="34.6"></div>
+                           <div class="text">
+                              TRANSFER
+                           </div>
+                        </div>
                      </div>
-                     </div>
-                     <div class="col-6  px-0">-->
-                  <button class="btn  btn-block journeyMobileButton">JOURNEY TYPE</button>
+                  </div>
                </div>
             </div>
-            <div class="mainContainerdetail d-none d-lg-block ">
-            <div class="container" class="height:163px">
+            </div>
+            <div class="mainContainerdetail d-none d-lg-block">
+            <div class="container">
                <div class="supportDiv row">
                   <div class="col-md-6">
                      <span>Support <b> 444 1 iGA / 444 1 442</b></span>
@@ -140,7 +154,7 @@
                   </div>
                   <div class="col-md-10">
                      <div class="row d-flex align-items-center">
-                        <div class="col-md-7 d-flex justify-content-end">
+                        <div class="col-md-5 col-lg-6 col-sm-6 d-flex justify-content-end">
                            <form class="mr-4 ">
                               <div class="input-group mb-3 my-2 my-lg-0 mainSearch">
                                  <input type="text" class="form-control w-80" placeholder="Search Any Products…"
@@ -151,9 +165,9 @@
                               </div>
                            </form>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-7 col-lg-6">
                            <div class="row ">
-                              <div class="col-md-4 ">
+                              <div class="col-md-4 px-0">
                                  <a href="javascript:void(0)">
                                     <div class="icon float-left">
                                        <i class="fas fa-user"></i>
@@ -164,7 +178,7 @@
                                     </div>
                                  </a>
                               </div>
-                              <div class="col-md-4 ">
+                              <div class="col-md-4 pl-0 ">
                                  <a href="javascript:void(0)">
                                     <div class="icon float-left">
                                        <i class="fas fa-heart"></i>
@@ -175,7 +189,7 @@
                                     </div>
                                  </a>
                               </div>
-                              <div class="col-md-4 pl-0">
+                              <div class="col-md-4 px-0">
                                  <a href="javascript:void(0)">
                                     <div class="icon float-left">
                                        <i class="fas fa-shopping-cart"></i>
@@ -202,57 +216,56 @@
                               <button class="btn text-left btn-block dropdown-toggle categoryBtn" data-toggle="collapse"
                                  type="button" id="dropdownCategory" data-target="#dropdownCategoryMenu" aria-haspopup="true"
                                  aria-expanded="false">
-                                 ALL CATEGORİES
-                                 <i class="fas fa-bars"></i>
+                              ALL CATEGORİES
+                              <i class="fas fa-bars"></i>
                               </button>
                            </div>
                         </div>
-                        <div class="col-md-6 others">
+                        <div class="col-md-7 others">
                            <a href="#"><span>ALL BRANDS</span></a>
                            <a href="#"><span>UNIFREE</span></a>
                            <a href="#"><span>SPECIAL OFFERS</span></a>
                            <a href="#"><span>BEST SELLERS</span></a>
                         </div>
-                        <div class="col-md-3 px-0">
+                        <div class="col-md-2 px-0">
                            <div class="dropdown journeyType">
                               <button class="btn text-left btn-block dropdown-toggle journeyBtn" data-toggle="collapse"
                                  type="button" data-target="#dropdownJourneyMenu" aria-haspopup="true" aria-expanded="false"
                                  id="dropdownJourneyBtn">
                               JOURNEY TYPE
-                              </button>
+                               </button>
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="dropdown-menu  container  dropdownMenu  " id="dropdownJourneyMenu"
+               <div class="dropdown-menu  container  dropdownMenu " id="dropdownJourneyMenu"
                   aria-labelledby="dropdownJourney">
-                  <div class="row justify-content-center text-center div1">
-                     <div class="symbs col-md-2 mt-4 ">
+                  <div class="row justify-content-center text-center dropdownJourneyMenu-bg">
+                     <div class="col-md-2">
                         <div class="icon"><img src="assets/images/business_icon.svg" alt='' width="34.6" height="34.6"></div>
                         <div class="text">
                            BUSINESS
                         </div>
                      </div>
-                     <div class="symbs col-md-2 mt-4 ">
+                     <div class="col-md-2">
                         <div class="icon"><img src="assets/images/family_icon.svg" alt='' width="34.6" height="34.6"></div>
                         <div class="text">
                            FAMILY
                         </div>
                      </div>
-                     <div class=" symbs col-md-2 mt-4 ">
+                     <div class="col-md-2">
                         <div class="icon"><img src="assets/images/traveller.svg" alt='' width="34.6" height="34.6"></div>
                         <div class="text">
                            TRAVELER
                         </div>
                      </div>
-                     <div class="symbs col-md-2 mt-4 ">
+                     <div class="col-md-2">
                         <div class="icon"><img src="assets/images/transfer_icon.svg" alt='' width="34.6" height="34.6"></div>
                         <div class="text">
                            TRANSFER
                         </div>
                      </div>
-                     <div class="div2"></div>
                   </div>
                </div>
                <div class="dropdown-menu container dropdownCategoryMenu" id="dropdownCategoryMenu">
@@ -414,284 +427,262 @@
             <span class="Placeholder-Label"> Parfume ></span>
             <span class="Placeholder-Label"> Women</span>
          </div>
-         <div class='' style="margin-top: 28px;margin-bottom: 9px;">
-            <span class="PlaceholderBrands d-none col-md-block" >Brands</span>
-         </div>
+         <style> 
+         </style>
          <div class=" container ">
             <div class="row">
                <div class="col-md-3 col-sm-12   col-lg-2  px-0  d-md-block mobileOpenFilter" id="mobileOpenFilter">
-                  <a href="javascript:;" style="text-decoration: none;" title="Close" class="float-right d-block d-md-none filterMobileOpen">X</a>
+                  <a href="javascript:;" style="text-decoration: none;" title="Close" class="float-right d-block d-md-none filterMobileOpen"><i class="fas fa-times"></i></a>
+                  <div class=' mt-4 mb-1'  >
+                     <span class="font-weight-bold	" >Brands</span>
+                  </div>
                   <input class="typeBrand" type="text" placeholder="Type Brand"> 
                   <div class="overflow-auto w-100 mt-1 border-bottom element-holder" style="height: 140px;">
                      <div class="form-check">
                         <label class="form-check-label checkboxTop" >
-                            <input class="form-check-input" type="checkbox"  id="defaultCheck0"  for='Marka' val="enes">
-                           enes 
+                        <input class="form-check-input" type="checkbox"  id="defaultCheck0"  for='Marka' val="enes">
+                        enes 
                         </label>
                      </div>
                      <div class="form-check">
                         <label class="form-check-label checkboxTop">
-                           <input class="form-check-input" type="checkbox"  id="defaultCheck1"  for="Marka" val="onur">
-                           onur
+                        <input class="form-check-input" type="checkbox"  id="defaultCheck1"  for="Marka" val="onur">
+                        onur
                         </label>
                      </div>
                      <div class="form-check">
                         <label class="form-check-label checkboxTop" >
-                           <input class="form-check-input" type="checkbox"   id="defaultCheck2" for="Marka" val="elnur">
-                           elnur
+                        <input class="form-check-input" type="checkbox"   id="defaultCheck2" for="Marka" val="elnur">
+                        elnur
                         </label>
                      </div>
                      <div class="form-check">
                         <label class="form-check-label checkboxTop" >
-                           <input class="form-check-input" type="checkbox"  id="defaultCheck3" for="Marka" val="ahmet">
-                           ahmet
+                        <input class="form-check-input" type="checkbox"  id="defaultCheck3" for="Marka" val="ahmet">
+                        ahmet
                         </label>
                      </div>
                      <div class="form-check">
                         <label class="form-check-label checkboxTop" >
-                           <input class="form-check-input" type="checkbox"   id="defaultCheck4" for="Marka" val="seda">   
-                           seda
+                        <input class="form-check-input" type="checkbox"   id="defaultCheck4" for="Marka" val="seda">   
+                        seda
                         </label>
                      </div>
                      <div class="form-check">
                         <label class="form-check-label checkboxTop" >
-                           <input class="form-check-input" type="checkbox"   id="defaultCheck4" for="Marka" val="hades">
-                           hades
-                        </label>
-                     </div>
-
-                     <div class="form-check">
-                        <label class="form-check-label checkboxTop" >
-                           <input class="form-check-input" type="checkbox"   id="defaultCheck2" for="Marka" val="elnur">
-                           elnur
+                        <input class="form-check-input" type="checkbox"   id="defaultCheck4" for="Marka" val="hades">
+                        hades
                         </label>
                      </div>
                      <div class="form-check">
                         <label class="form-check-label checkboxTop" >
-                           <input class="form-check-input" type="checkbox"  id="defaultCheck3" for="Marka" val="ahmet">
-                           ahmet
+                        <input class="form-check-input" type="checkbox"   id="defaultCheck2" for="Marka" val="elnur">
+                        elnur
                         </label>
                      </div>
                      <div class="form-check">
                         <label class="form-check-label checkboxTop" >
-                           <input class="form-check-input" type="checkbox"   id="defaultCheck4" for="Marka" val="seda">   
-                           seda
+                        <input class="form-check-input" type="checkbox"  id="defaultCheck3" for="Marka" val="ahmet">
+                        ahmet
                         </label>
                      </div>
                      <div class="form-check">
                         <label class="form-check-label checkboxTop" >
-                           <input class="form-check-input" type="checkbox"   id="defaultCheck4" for="Marka" val="hades">
-                           hades
+                        <input class="form-check-input" type="checkbox"   id="defaultCheck4" for="Marka" val="seda">   
+                        seda
                         </label>
                      </div>
-                     
-                  </div> 
-                  
+                     <div class="form-check">
+                        <label class="form-check-label checkboxTop" >
+                        <input class="form-check-input" type="checkbox"   id="defaultCheck4" for="Marka" val="hades">
+                        hades
+                        </label>
+                     </div>
+                  </div>
                   <div class="d-flex mb-1  flex-wrap">
-                     <span class="mt-2 mb-1 w-100 ">Price</span>
-                    <div class="  px-1 px-md-1    px-md-0 px-lg-0 col-6 col-md-4 col-lg-4 col-sm-6  ">                      
-                       <input type="text" placeholder="Min" id="minPrice" class="priceinput ">
-                    </div>
-                    <div class=" px-1 px-md-1 px-lg-1  px-md-0 px-lg-0 col-6 col-md-4 col-lg-4 col-sm-6 ">
-                     <input type="text" placeholder="Max" id="maxPrice" class="priceinput ">
-                    </div>
-                    <div class="px-1 px-md-1 px-lg-1  px-md-0 px-lg-0 col-12 col-md-4 col-lg-4 col-sm-12  mt-1 mt-md-0">
-                      <button class="pricebutton " id="pricebutton" >
-                      <span class="updatelabel"> Update</span>
-                      </button>
-                    </div>
+                     <span class="mt-4 mb-1 w-100 font-weight-bold	  ">Price</span>
+                     <div class="  px-1 px-md-1    px-md-0 px-lg-0 col-6 col-md-4 col-lg-4 col-sm-6  ">                      
+                        <input type="text" placeholder="Min" id="minPrice" class="priceinput ">
+                     </div>
+                     <div class=" px-1 px-md-1 px-lg-1  px-md-0 px-lg-0 col-6 col-md-4 col-lg-4 col-sm-6 ">
+                        <input type="text" placeholder="Max" id="maxPrice" class="priceinput ">
+                     </div>
+                     <div class="px-1 px-md-1 px-lg-1  px-md-0 px-lg-0 col-12 col-md-4 col-lg-4 col-sm-12  mt-1 mt-md-0">
+                        <button class="pricebutton " id="pricebutton" >
+                        <span class="updatelabel"> Update</span>
+                        </button>
+                     </div>
                   </div>
                   <div class="overflow-auto w-100 border-bottom py-1 " style="height: 140px;">
-
                      <div class="form-check">
                         <label class="form-check-label " >
-                           <input class="form-check-input amountCheck" type="checkbox" name="amount"  for="Fiyat"  valmin="0" valmax="25">
-                           0 - 25 TL 
-                           <span>(12)</span>
+                        <input class="form-check-input amountCheck" type="checkbox" name="amount"  for="Fiyat"  valmin="0" valmax="25">
+                        0 - 25 TL 
+                        <span>(12)</span>
                         </label>    
                      </div>
-
                      <div class="form-check">
                         <label class="form-check-label " >
-                           <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="25" valmax="50">
-                           25 - 50 TL 
-                           <span>(2)</span>
-                        </label>
-                     </div>
-
-                     <div class="form-check">
-                        <label class="form-check-label " >
-                           <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat"  valmin="50" valmax="250">
-                           50 - 100 TL 
-                           <span>(1)</span>
-                        </label>
-                     </div>
-
-                     <div class="form-check">
-                        <label class="form-check-label " >
-                           <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="250" valmax="500">
-                           250 - 500 TL 
-                           <span>(5)</span>
-                        </label>
-                     </div>
-
-
-                     <div class="form-check">
-                        <label class="form-check-label " >
-                           <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="500" valmax="1000">
-                           500 - 1000 TL 
-                           <span>(5)</span>
-                        </label>
-                     </div>
-
-                     <div class="form-check">
-                        <label class="form-check-label " >
-                           <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="1000" valmax="1500">
-                           1000 - 1500 TL 
-                           <span>(5)</span>
+                        <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="25" valmax="50">
+                        25 - 50 TL 
+                        <span>(2)</span>
                         </label>
                      </div>
                      <div class="form-check">
                         <label class="form-check-label " >
-                           <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="1500" valmax="2500">
-                           1500 - 2500 TL 
-                           <span>(5)</span>
+                        <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat"  valmin="50" valmax="250">
+                        50 - 100 TL 
+                        <span>(1)</span>
                         </label>
                      </div>
                      <div class="form-check">
                         <label class="form-check-label " >
-                           <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="2500" valmax="4000">
-                           2500 - 4000 TL 
-                           <span>(5)</span>
+                        <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="250" valmax="500">
+                        250 - 500 TL 
+                        <span>(5)</span>
                         </label>
                      </div>
                      <div class="form-check">
                         <label class="form-check-label " >
-                           <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="4000" valmax="6000">
-                           4000 - 6000 TL 
-                           <span>(5)</span>
+                        <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="500" valmax="1000">
+                        500 - 1000 TL 
+                        <span>(5)</span>
                         </label>
                      </div>
                      <div class="form-check">
                         <label class="form-check-label " >
-                           <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="6000" valmax="7500">
-                           6000 - 7500 TL 
-                           <span>(5)</span>
+                        <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="1000" valmax="1500">
+                        1000 - 1500 TL 
+                        <span>(5)</span>
                         </label>
                      </div>
                      <div class="form-check">
                         <label class="form-check-label " >
-                           <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="7500" valmax="10000">
-                           7500 - 10000 TL 
-                           <span>(5)</span>
+                        <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="1500" valmax="2500">
+                        1500 - 2500 TL 
+                        <span>(5)</span>
                         </label>
                      </div>
-
- 
-                      
+                     <div class="form-check">
+                        <label class="form-check-label " >
+                        <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="2500" valmax="4000">
+                        2500 - 4000 TL 
+                        <span>(5)</span>
+                        </label>
+                     </div>
+                     <div class="form-check">
+                        <label class="form-check-label " >
+                        <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="4000" valmax="6000">
+                        4000 - 6000 TL 
+                        <span>(5)</span>
+                        </label>
+                     </div>
+                     <div class="form-check">
+                        <label class="form-check-label " >
+                        <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="6000" valmax="7500">
+                        6000 - 7500 TL 
+                        <span>(5)</span>
+                        </label>
+                     </div>
+                     <div class="form-check">
+                        <label class="form-check-label " >
+                        <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="7500" valmax="10000">
+                        7500 - 10000 TL 
+                        <span>(5)</span>
+                        </label>
+                     </div>
                   </div>
-                   <div class='' style="margin-top: 28px;">
-                     <span class="PlaceholderBrands">Rating</span>
+                  <div class=" mt-4 font-weight-bold	  ">
+                     <span >Rating</span>
                   </div>
                   <div class="d-flex flex-row">
                      <div class="d-flex flex-column">
-                         
                         <div class="divofformcheck">
-
-
                            <div class="form-check">
                               <label class="form-check-label " >
-                                 <input class="form-check-input starCheck" type="checkbox" name="starrate"  for="Yıldız" val="5">
-                                    <img src="assets/images/PlayIcon.svg" alt=''>
-                                    <img src="assets/images/PlayIcon.svg" alt=''>
-                                    <img src="assets/images/PlayIcon.svg" alt=''>
-                                    <img src="assets/images/PlayIcon.svg" alt=''>
-                                    <img src="assets/images/PlayIcon.svg" alt=''>
-                                 <span>(5)</span>
+                              <input class="form-check-input starCheck" type="checkbox" name="starrate"  for="Yıldız" val="5">
+                              <img src="assets/images/PlayIcon.svg" alt=''>
+                              <img src="assets/images/PlayIcon.svg" alt=''>
+                              <img src="assets/images/PlayIcon.svg" alt=''>
+                              <img src="assets/images/PlayIcon.svg" alt=''>
+                              <img src="assets/images/PlayIcon.svg" alt=''>
+                              <span>(5)</span>
                               </label>
                            </div>
-
                            <div class="form-check">
                               <label class="form-check-label " >
-                                 <input class="form-check-input starCheck" type="checkbox" name="starrate"  for="Yıldız" val="4">
-                                    <img src="assets/images/PlayIcon.svg" alt=''>
-                                    <img src="assets/images/PlayIcon.svg" alt=''>
-                                    <img src="assets/images/PlayIcon.svg" alt=''>
-                                    <img src="assets/images/PlayIcon.svg" alt=''>
-                                    <img src="assets/images/PlayIcon2.svg" alt=''>
-                                 <span>(5)</span>
+                              <input class="form-check-input starCheck" type="checkbox" name="starrate"  for="Yıldız" val="4">
+                              <img src="assets/images/PlayIcon.svg" alt=''>
+                              <img src="assets/images/PlayIcon.svg" alt=''>
+                              <img src="assets/images/PlayIcon.svg" alt=''>
+                              <img src="assets/images/PlayIcon.svg" alt=''>
+                              <img src="assets/images/PlayIcon2.svg" alt=''>
+                              <span>(5)</span>
                               </label>
                            </div>
-
                            <div class="form-check">
                               <label class="form-check-label " >
-                                 <input class="form-check-input starCheck" type="checkbox" name="starrate"  for="Yıldız" val="3">
-                                    <img src="assets/images/PlayIcon.svg" alt=''>
-                                    <img src="assets/images/PlayIcon.svg" alt=''>
-                                    <img src="assets/images/PlayIcon.svg" alt=''>
-                                    <img src="assets/images/PlayIcon2.svg" alt=''>
-                                    <img src="assets/images/PlayIcon2.svg" alt=''>
-                                 <span>(5)</span>
+                              <input class="form-check-input starCheck" type="checkbox" name="starrate"  for="Yıldız" val="3">
+                              <img src="assets/images/PlayIcon.svg" alt=''>
+                              <img src="assets/images/PlayIcon.svg" alt=''>
+                              <img src="assets/images/PlayIcon.svg" alt=''>
+                              <img src="assets/images/PlayIcon2.svg" alt=''>
+                              <img src="assets/images/PlayIcon2.svg" alt=''>
+                              <span>(5)</span>
                               </label>
                            </div>
-
                            <div class="form-check">
                               <label class="form-check-label " >
-                                 <input class="form-check-input starCheck" type="checkbox" name="starrate"  for="Yıldız" val="2">
-                                    <img src="assets/images/PlayIcon.svg" alt=''>
-                                    <img src="assets/images/PlayIcon.svg" alt=''>
-                                    <img src="assets/images/PlayIcon2.svg" alt=''>
-                                    <img src="assets/images/PlayIcon2.svg" alt=''>
-                                    <img src="assets/images/PlayIcon2.svg" alt=''>
-                                 <span>(5)</span>
+                              <input class="form-check-input starCheck" type="checkbox" name="starrate"  for="Yıldız" val="2">
+                              <img src="assets/images/PlayIcon.svg" alt=''>
+                              <img src="assets/images/PlayIcon.svg" alt=''>
+                              <img src="assets/images/PlayIcon2.svg" alt=''>
+                              <img src="assets/images/PlayIcon2.svg" alt=''>
+                              <img src="assets/images/PlayIcon2.svg" alt=''>
+                              <span>(5)</span>
                               </label>
                            </div>
-
                            <div class="form-check">
                               <label class="form-check-label " >
-                                 <input class="form-check-input starCheck" type="checkbox" name="starrate"  for="Yıldız" val="1">
-                                    <img src="assets/images/PlayIcon.svg" alt=''>
-                                    <img src="assets/images/PlayIcon2.svg" alt=''>
-                                    <img src="assets/images/PlayIcon2.svg" alt=''>
-                                    <img src="assets/images/PlayIcon2.svg" alt=''>
-                                    <img src="assets/images/PlayIcon2.svg" alt=''>
-                                 <span>(5)</span>
+                              <input class="form-check-input starCheck" type="checkbox" name="starrate"  for="Yıldız" val="1">
+                              <img src="assets/images/PlayIcon.svg" alt=''>
+                              <img src="assets/images/PlayIcon2.svg" alt=''>
+                              <img src="assets/images/PlayIcon2.svg" alt=''>
+                              <img src="assets/images/PlayIcon2.svg" alt=''>
+                              <img src="assets/images/PlayIcon2.svg" alt=''>
+                              <span>(5)</span>
                               </label>
                            </div>
-
- 
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="  col-md-9 col-sm-12 col-lg-10 col-sm-9  pr-0 pl-0 pl-sm-3">
-                  <div class="mb-4" ><span class="titleDetail">Women Parfumes</span> </div>
+               <div class="   col-md-9 col-sm-12 col-lg-10 col-sm-9  pr-0 pl-0 pl-sm-3">
+                  <div class="mb-4 mt-5" ><span class="titleDetail">Women Parfumes</span> </div>
                   <div class="d-flex flex-column border "  >
                      <div class=" flex-row resetfilterslong" style="min-height: 76px;display: none;">
                         <div class="  d-flex flex-row" style="flex-wrap:wrap" id="longrow">
                            <span class="order-12 m-2"><a class="resetfilter" id="resetfilterbutton">Reset Filters</a></span>
                         </div>
-                      </div>
+                     </div>
                      <div class="d-flex flex-row border-top border-bottom h-1"  >
                         <div class="d-flex justify-content-between d-md-none w-100 "  >
                            <div id="changemobile" class="d-flex align-items-center justify-content-center col-2 changemob">
                               <span>
-                                 
-
                                  <div class="flex-end mx-0" >
                                     <a href="javascript:;" class="gridthree">
-                                       <i class="fas fa-th-large "></i>
+                                    <i class="fas fa-th-large "></i>
                                     </a>
                                  </div>
                                  <div class="mx-0" >
                                     <a href="javascript:;" class="gridfour active">
-                                       <i class="fas fa-th "></i>
+                                    <i class="fas fa-th "></i>
                                     </a>  
                                  </div>
                               </span>
                            </div>
                            <div class="d-flex align-items-center justify-content-center col-5 border-right" #id="sırala"
-                             ><button class="bg-white text-dark border-0 p-2" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Sırala</button></div>
+                              ><button class="bg-white text-dark border-0 p-2" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Sırala</button></div>
                            <!-- Button trigger modal -->
                            <!-- Modal -->
                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
@@ -780,12 +771,12 @@
                         <div class="col-3  flex-row justify-content-end d-none d-lg-flex">
                            <div class="flex-end mt-1" >
                               <a href="javascript:;" class="gridthree">
-                                 <i class="fas fa-th-large "></i>
+                              <i class="fas fa-th-large "></i>
                               </a>
                            </div>
                            <div class="mt-1" >
                               <a href="javascript:;" class="gridfour active">
-                                 <i class="fas fa-th "></i>
+                              <i class="fas fa-th "></i>
                               </a>  
                            </div>
                         </div>
@@ -793,7 +784,7 @@
                      <!-- ///////////////içerik -->
                      <div class="d-flex" style="flex-direction:column">
                         <div class="d-flex flex-row space-around my-5 flex-wrap " >
-                           <div class="d-flex justify-content-center flex-column">
+                           <div class="d-flex justify-content-center flex-column pr-3 pr-sm-0">
                               <div class="row justify-content-center ml-0">
                                  <div class="changeble col-6 col-md-4 col-lg-3">
                                     <div class="d-flex justify-content-center scaleProduct flex-column"
@@ -810,31 +801,9 @@
                                        Eau de Toilette 100 ml</span>
                                        <span style="text-align:center">89£</span>
                                        <div class="flex-row justify-content-center hovered">
-                                        <button class="btn btn-link buy text-secondary"> <i class="fas fa-lg fa-shopping-cart"></i></button>
-                                        <button class="btn  btn-link view text-secondary"> <i class="fas fa-lg fa-eye"></i></button>
-                                        <button class="btn  btn-link love text-secondary"> <i class="fas fa-lg fa-heart"></i></button>
-                                       </div>
-                                    </div>
-                                 </div>
-
-                                 <div class="changeble col-6 col-md-4 col-lg-3">
-                                    <div class="d-flex justify-content-center scaleProduct flex-column"
-                                       style="text-align: center;">
-                                       <div><img class="idkwits" src="assets/images/product2.png" alt=''></div>
-                                       <div class="d-flex flex-row justify-content-center">
-                                          <img class="playiconclass" src="assets/images/PlayIcon.svg" alt="PlayIcon">
-                                          <img class="playiconclass" src="assets/images/PlayIcon.svg" alt="PlayIcon">
-                                          <img class="playiconclass" src="assets/images/PlayIcon.svg" alt="PlayIcon">
-                                          <img class="playiconclass" src="assets/images/PlayIcon.svg" alt="PlayIcon">
-                                          <img class="playiconclass" src="assets/images/PlayIcon.svg" alt="PlayIcon">
-                                       </div>
-                                       <span style="text-align:center" class="markaText">Pineapple by Dolce&Gabbana <br>
-                                       Eau de Toilette 100 ml</span>
-                                       <span style="text-align:center">89£</span>
-                                       <div class="flex-row justify-content-center hovered">
-                                        <button class="btn btn-link buy text-secondary"> <i class="fas fa-lg fa-shopping-cart"></i></button>
-                                        <button class="btn  btn-link view text-secondary"> <i class="fas fa-lg fa-eye"></i></button>
-                                        <button class="btn  btn-link love text-secondary"> <i class="fas fa-lg fa-heart"></i></button>
+                                          <button class="btn btn-link buy text-secondary"> <i class="fas fa-lg fa-shopping-cart"></i></button>
+                                          <button class="btn  btn-link view text-secondary"> <i class="fas fa-lg fa-eye"></i></button>
+                                          <button class="btn  btn-link love text-secondary"> <i class="fas fa-lg fa-heart"></i></button>
                                        </div>
                                     </div>
                                  </div>
@@ -853,9 +822,9 @@
                                        Eau de Toilette 100 ml</span>
                                        <span style="text-align:center">89£</span>
                                        <div class="flex-row justify-content-center hovered">
-                                        <button class="btn btn-link buy text-secondary"> <i class="fas fa-lg fa-shopping-cart"></i></button>
-                                        <button class="btn  btn-link view text-secondary"> <i class="fas fa-lg fa-eye"></i></button>
-                                        <button class="btn  btn-link love text-secondary"> <i class="fas fa-lg fa-heart"></i></button>
+                                          <button class="btn btn-link buy text-secondary"> <i class="fas fa-lg fa-shopping-cart"></i></button>
+                                          <button class="btn  btn-link view text-secondary"> <i class="fas fa-lg fa-eye"></i></button>
+                                          <button class="btn  btn-link love text-secondary"> <i class="fas fa-lg fa-heart"></i></button>
                                        </div>
                                     </div>
                                  </div>
@@ -874,9 +843,9 @@
                                        Eau de Toilette 100 ml</span>
                                        <span style="text-align:center">89£</span>
                                        <div class="flex-row justify-content-center hovered">
-                                        <button class="btn btn-link buy text-secondary"> <i class="fas fa-lg fa-shopping-cart"></i></button>
-                                        <button class="btn  btn-link view text-secondary"> <i class="fas fa-lg fa-eye"></i></button>
-                                        <button class="btn  btn-link love text-secondary"> <i class="fas fa-lg fa-heart"></i></button>
+                                          <button class="btn btn-link buy text-secondary"> <i class="fas fa-lg fa-shopping-cart"></i></button>
+                                          <button class="btn  btn-link view text-secondary"> <i class="fas fa-lg fa-eye"></i></button>
+                                          <button class="btn  btn-link love text-secondary"> <i class="fas fa-lg fa-heart"></i></button>
                                        </div>
                                     </div>
                                  </div>
@@ -895,9 +864,9 @@
                                        Eau de Toilette 100 ml</span>
                                        <span style="text-align:center">89£</span>
                                        <div class="flex-row justify-content-center hovered">
-                                        <button class="btn btn-link buy text-secondary"> <i class="fas fa-lg fa-shopping-cart"></i></button>
-                                        <button class="btn  btn-link view text-secondary"> <i class="fas fa-lg fa-eye"></i></button>
-                                        <button class="btn  btn-link love text-secondary"> <i class="fas fa-lg fa-heart"></i></button>
+                                          <button class="btn btn-link buy text-secondary"> <i class="fas fa-lg fa-shopping-cart"></i></button>
+                                          <button class="btn  btn-link view text-secondary"> <i class="fas fa-lg fa-eye"></i></button>
+                                          <button class="btn  btn-link love text-secondary"> <i class="fas fa-lg fa-heart"></i></button>
                                        </div>
                                     </div>
                                  </div>
@@ -916,9 +885,9 @@
                                        Eau de Toilette 100 ml</span>
                                        <span style="text-align:center">89£</span>
                                        <div class="flex-row justify-content-center hovered">
-                                        <button class="btn btn-link buy text-secondary"> <i class="fas fa-lg fa-shopping-cart"></i></button>
-                                        <button class="btn  btn-link view text-secondary"> <i class="fas fa-lg fa-eye"></i></button>
-                                        <button class="btn  btn-link love text-secondary"> <i class="fas fa-lg fa-heart"></i></button>
+                                          <button class="btn btn-link buy text-secondary"> <i class="fas fa-lg fa-shopping-cart"></i></button>
+                                          <button class="btn  btn-link view text-secondary"> <i class="fas fa-lg fa-eye"></i></button>
+                                          <button class="btn  btn-link love text-secondary"> <i class="fas fa-lg fa-heart"></i></button>
                                        </div>
                                     </div>
                                  </div>
@@ -937,9 +906,9 @@
                                        Eau de Toilette 100 ml</span>
                                        <span style="text-align:center">89£</span>
                                        <div class="flex-row justify-content-center hovered">
-                                        <button class="btn btn-link buy text-secondary"> <i class="fas fa-lg fa-shopping-cart"></i></button>
-                                        <button class="btn  btn-link view text-secondary"> <i class="fas fa-lg fa-eye"></i></button>
-                                        <button class="btn  btn-link love text-secondary"> <i class="fas fa-lg fa-heart"></i></button>
+                                          <button class="btn btn-link buy text-secondary"> <i class="fas fa-lg fa-shopping-cart"></i></button>
+                                          <button class="btn  btn-link view text-secondary"> <i class="fas fa-lg fa-eye"></i></button>
+                                          <button class="btn  btn-link love text-secondary"> <i class="fas fa-lg fa-heart"></i></button>
                                        </div>
                                     </div>
                                  </div>
@@ -958,13 +927,33 @@
                                        Eau de Toilette 100 ml</span>
                                        <span style="text-align:center">89£</span>
                                        <div class="flex-row justify-content-center hovered">
-                                        <button class="btn btn-link buy text-secondary"> <i class="fas fa-lg fa-shopping-cart"></i></button>
-                                        <button class="btn  btn-link view text-secondary"> <i class="fas fa-lg fa-eye"></i></button>
-                                        <button class="btn  btn-link love text-secondary"> <i class="fas fa-lg fa-heart"></i></button>
+                                          <button class="btn btn-link buy text-secondary"> <i class="fas fa-lg fa-shopping-cart"></i></button>
+                                          <button class="btn  btn-link view text-secondary"> <i class="fas fa-lg fa-eye"></i></button>
+                                          <button class="btn  btn-link love text-secondary"> <i class="fas fa-lg fa-heart"></i></button>
                                        </div>
                                     </div>
                                  </div>
-                                 
+                                 <div class="changeble col-6 col-md-4 col-lg-3">
+                                    <div class="d-flex justify-content-center scaleProduct flex-column"
+                                       style="text-align: center;">
+                                       <div><img class="idkwits" src="assets/images/product2.png" alt=''></div>
+                                       <div class="d-flex flex-row justify-content-center">
+                                          <img class="playiconclass" src="assets/images/PlayIcon.svg" alt="PlayIcon">
+                                          <img class="playiconclass" src="assets/images/PlayIcon.svg" alt="PlayIcon">
+                                          <img class="playiconclass" src="assets/images/PlayIcon.svg" alt="PlayIcon">
+                                          <img class="playiconclass" src="assets/images/PlayIcon.svg" alt="PlayIcon">
+                                          <img class="playiconclass" src="assets/images/PlayIcon.svg" alt="PlayIcon">
+                                       </div>
+                                       <span style="text-align:center" class="markaText">Pineapple by Dolce&Gabbana <br>
+                                       Eau de Toilette 100 ml</span>
+                                       <span style="text-align:center">89£</span>
+                                       <div class="flex-row justify-content-center hovered">
+                                          <button class="btn btn-link buy text-secondary"> <i class="fas fa-lg fa-shopping-cart"></i></button>
+                                          <button class="btn  btn-link view text-secondary"> <i class="fas fa-lg fa-eye"></i></button>
+                                          <button class="btn  btn-link love text-secondary"> <i class="fas fa-lg fa-heart"></i></button>
+                                       </div>
+                                    </div>
+                                 </div>
                               </div>
                            </div>
                         </div>
@@ -1119,7 +1108,7 @@
                alt='' style="height: 35px; width: 100px;margin-top: 30px;"></div>
             <div class="d-flex justify-content-center">
                <form class=" ">
-                  <div class="input-group " style="width:350px">
+                  <div class="input-group " >
                      <input type="text" class="form-control w-80" placeholder="Enter Your Email Address"
                         aria-label="Recipient's username" aria-describedby="basic-addon2">
                      <div class="input-group-append">

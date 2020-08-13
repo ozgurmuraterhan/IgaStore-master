@@ -1,4 +1,4 @@
-@import "/assets/dist/css/font/stylesheet.css";
+@import "font/stylesheet.css";
 $brand: #00bfd6;
 
 ::-webkit-scrollbar {
@@ -144,7 +144,7 @@ $brand: #00bfd6;
             background-color: $brand;
             border-radius: 0 !important;
             &:after {
-                content: url("../../assets/menuIcon.svg");
+                content: url("../../images/menuIcon.svg");
                 float: right;
                 padding-left: 1em;
                 border: none;
@@ -165,7 +165,7 @@ $brand: #00bfd6;
             color: #ffffff;
             border-radius: 0px;
             &:after {
-                content: url("../../assets/caretDown.svg");
+                content: url("../../images/caretDown.svg");
                 float: right;
                 padding-left: 1em;
                 border: none;
@@ -268,7 +268,7 @@ body {
         border-right: 1px solid #dedede;
         border-radius: 0px;
         &:after {
-            content: url("../../assets/caretRight.svg");
+            content: url("../../images/caretRight.svg");
             float: right;
         }
         &.active {
@@ -424,7 +424,7 @@ header {
         font-stretch: normal;
         line-height: 2.2;
         color: #ffffff;
-        padding-top: 16px;
+        padding-top: 14px;
         .categoryBtn {
             padding: 13px 12px;
             font-size: 13px;
@@ -468,7 +468,7 @@ header {
                 float: right;
                 border-radius: 0px;
                 &:after {
-                    content: url("../../assets/caretDown.svg");
+                    content: url("../../images/caretDown.svg");
                     float: right;
                     padding-left: 1em;
                     border: none;
@@ -600,6 +600,17 @@ header {
     }
 }
 
+.dropdownJourneyMenu-bg {
+    background: #101e316b !important;
+}
+
+#closeMobileAllDiv {
+    float: right;
+    text-decoration: none;
+    font-size: 14pt;
+    color: #000;
+}
+
 .mobile-bottom-menu-ul {
     padding: 0;
     margin: 0;
@@ -618,20 +629,15 @@ header {
     }
 }
 
-@media screen and (max-width: 1322px) {
-    header {
-        .mainContainerdetail {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            width: 100%;
-            z-index: 2;
-            min-height: 209px;
-            background: #15243a;
-        }
-    }
+#dropdownJourneyMenuMobile {
+    background: #101e316b;
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 995px) {
+    header .logoDiv a .icon {
+        margin-right: 5px;
+    }
+
     .mainBanner {
         .slick-slide {
             img {
@@ -642,7 +648,7 @@ header {
 
     .mobile-bottom-all-div {
         display: block;
-        background: #404040;
+        background: #15253a;
         box-shadow: 0px 17px 20px 8px #000;
     }
 

@@ -501,3 +501,7 @@ $(".sliderMain").on("swipeleft", function (event) {
         $(".sliderMain > img").attr("src", srcCurrent);
     }
 });
+
+$("#closeMobileAllDiv").click(function () {
+    $(".mobile-fixed-category-menu-div").hide();
+});
