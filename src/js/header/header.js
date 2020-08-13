@@ -23,6 +23,7 @@ $(document).ready(function () {
     $("#dropdownCategoryMenu").mouseleave(function () {
         $("#dropdownCategoryMenu").collapse("hide");
     });
+
     $("#dropdownJourneyBtn")
         .parent(".dropdown")
         .hover(function () {

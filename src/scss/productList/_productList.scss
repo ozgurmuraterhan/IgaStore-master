@@ -1,0 +1,12 @@
+.hovered {
+    .text-secondary {
+        font-size: 9pt;
+        padding: 5px;
+        margin: 0 5px;
+        border-radius: 50%;
+        &:hover {
+            color: #fff !important;
+            background-color: #07bfd6;
+        }
+    }
+}

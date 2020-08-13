@@ -6,11 +6,14 @@ var concat = require("gulp-concat");
 var rename = require("gulp-rename");
 var cleanCSS = require("gulp-clean-css");
 var uglify = require("gulp-uglify");
+var sourcemaps = require("gulp-sourcemaps");
 
 function concatCss(cb) {
     // place code for your default task here
-    gulp.src("./src/scss/*/*.scss")
+    gulp.src("./src/scss/app.scss")
+        .pipe(sourcemaps.init())
         .pipe(sass())
+        .pipe(sourcemaps.write())
         .pipe(concat("styles.css"))
         .pipe(gulp.dest("./assets/dist/css/"));
     cb();
@@ -26,7 +29,7 @@ function minifyCss(cb) {
 
 function concatJs(cb) {
     // place code for your default task here
-    gulp.src("./src/js/*/*.js")
+    gulp.src("./src/js/**/**.js")
         .pipe(concat("script.js"))
         .pipe(gulp.dest("./assets/dist/js/"));
     cb();
