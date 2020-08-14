@@ -97,6 +97,17 @@ $(".filterMobileOpen").click(function () {
     $("#mobileOpenFilter").toggle("slow").focus();
 });
 $(document).ready(function () {
+    var header = document.querySelector("#headerProductFilterFixedMobil");
+
+    var headroom = new Headroom(header, {
+        tolerance: {
+            down: 5,
+            up: 5,
+        },
+        offset: 300,
+    });
+    headroom.init();
+
     var length = $(".form-check-input").length;
     var i = 0;
     while (i < length) {
