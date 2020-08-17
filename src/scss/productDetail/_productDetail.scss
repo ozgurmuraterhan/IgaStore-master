@@ -812,6 +812,57 @@
 }
 
 @media screen and (max-width: 768px) {
+    .mobile-filter-in-modal-title {
+        padding: 20px 0px 20px 0px;
+        width: 100%;
+        float: left;
+        font-weight: bold;
+        span {
+            font-weight: normal;
+            font-size: 10pt;
+            color: #ccc;
+        }
+        .mobile-sub-menu-in-modal {
+            top: 0;
+            left: 0;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            background: #fff;
+            padding: 25px 10px;
+            z-index: 4;
+            display: none;
+
+            .form-check-mobile {
+                float: left;
+                width: 100%;
+
+                .form-check-label {
+                    float: left;
+                    width: 100%;
+                    padding: 15px 5px;
+
+                    .form-check-input {
+                        float: right;
+                        position: inherit;
+                    }
+
+                    &:hover {
+                        background: #cccccc17;
+                    }
+                }
+            }
+        }
+
+        .mobile-sub-menu-in-modal-okey-btn {
+            bottom: 0;
+            left: 0;
+            position: fixed;
+            width: 100%;
+            height: 50px;
+        }
+    }
+
     .mobileOpenFilter {
         display: none;
     }
