@@ -8,6 +8,8 @@
       <link rel="stylesheet" href="assets/dist/bootstrap/css/bootstrap.css">
       <link rel="stylesheet" type="text/css" href="assets/dist/slick/slick.css" />
       <link rel="stylesheet" type="text/css" href="assets/dist/slick/slick-theme.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" type="text/css" media="all" />
+      <link rel="stylesheet" type="text/css" href="assets/dist/range/price_range_style.css"/>
       <link rel="stylesheet" href="assets/dist/css/styles.css">
    </head>
    <body>
@@ -500,16 +502,16 @@
                      </div>
                   </div>
                   <div class="d-flex mb-1  flex-wrap">
-                     <span class="mt-4 mb-1 w-100 font-weight-bold	  ">Price</span>
-                     <div class="  px-1 px-md-1    px-md-0 px-lg-0 col-6 col-md-4 col-lg-4 col-sm-6  ">                      
-                        <input type="text" placeholder="Min" id="minPrice" class="priceinput ">
+                     <span class="mt-4 mb-1 w-100 font-weight-bold">Price</span>
+                     <div class="px-1 px-md-1 px-md-0 px-lg-0 col-6 col-md-4 col-lg-4 col-sm-6  ">                      
+                        <input type="text" placeholder="Min" class="priceinput minPrice">
                      </div>
                      <div class=" px-1 px-md-1 px-lg-1  px-md-0 px-lg-0 col-6 col-md-4 col-lg-4 col-sm-6 ">
-                        <input type="text" placeholder="Max" id="maxPrice" class="priceinput ">
+                        <input type="text" placeholder="Max" class="priceinput maxPrice">
                      </div>
                      <div class="px-1 px-md-1 px-lg-1  px-md-0 px-lg-0 col-12 col-md-4 col-lg-4 col-sm-12  mt-1 mt-md-0">
-                        <button class="pricebutton " id="pricebutton" >
-                        <span class="updatelabel"> Update</span>
+                        <button class="pricebutton "  for="Fiyat">
+                        <span class="updatelabel" > Update</span>
                         </button>
                      </div>
                   </div>
@@ -657,7 +659,7 @@
                      </div>
                   </div>
                </div>
-               <div class="   col-md-9 col-sm-12 col-lg-10 col-sm-9  pr-0 pl-0 pl-sm-3">
+               <div class=" col-md-9 col-sm-12 col-lg-10 col-sm-9  pr-0 pl-0 pl-sm-3">
                   <div class="mb-4 mt-5" ><span class="titleDetail">Women Parfumes</span> </div>
                   <div class="d-flex flex-column border "  >
                      <div class=" flex-row resetfilterslong" style="min-height: 76px;display: none;">
@@ -985,256 +987,304 @@
 
 
       <div class="modal fade" id="modalFilter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered m-0 p-0 mw-100" role="document"  >
-         <div class="modal-content" style="border-radius:0">
+      <div class="modal-dialog  m-0 p-0 mw-100 h-100"    >
+         <div class="modal-content border-0 h-100">
             <div class="modal-header">
                <h5 class="modal-title" id="exampleModalLongTitle">Filtrele</h5>
                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                <span aria-hidden="true">&times;</span>
                </button>
             </div>
-            <div class="modal-body">
-               
+            <div class="modal-body">           
                <div class="col-12" id="mobileOpenFilter">
                   <div class="mobile-filter-in-modal-title">
                      Brands
-                     <br><span>Enes, Ahmet, Mehmet</span>
-                     <i class="fas fa-chevron-right float-right"></i> 
+                     <i class="fas fa-chevron-right float-right mt-1"></i> 
+                      <span class="choise-mobile-brand"> </span>
                      <div class="mobile-sub-menu-in-modal"> 
-                        <div class=' mt-4 mb-1'  >
-                           <div class="font-weight-bold	" >Brands</div>
-                        </div>
-                        <input class="typeBrand" type="text" placeholder="Type Brand"> 
+                        <div class="modal-header pt-0 px-0">
+                           <h5 class="modal-title" id="exampleModalLongTitle">Brands</h5>
+                           <a href="javascript:;" class="float-right closeSubProd" >
+                              <i class="fas fa-times"></i>
+                           </a>
+                         </div>
+                        <input class="typeBrand mt-4" type="text" placeholder="Type Brand"> 
                         <div class="overflow-auto w-100 mt-1 border-bottom element-holder">
                            <div class="form-check-mobile">
                               <label class="form-check-label checkboxTop" >
-                                 <input class="form-check-input" type="checkbox"  id="defaultCheck0"  for='Marka' val="enes">
+                                 <input class="form-check-input" type="checkbox"   name="brands"  id="defaultCheck0"  for='Marka' val="enes">
                                  enes 
                               </label>
                            </div>
                            <div class="form-check-mobile">
                               <label class="form-check-label checkboxTop">
-                                 <input class="form-check-input" type="checkbox"  id="defaultCheck1"  for="Marka" val="onur">
+                                 <input class="form-check-input" type="checkbox"   name="brands"  id="defaultCheck1"  for="Marka" val="onur">
                                  onur
                               </label>
                            </div>
                            <div class="form-check-mobile">
                               <label class="form-check-label checkboxTop" >
-                                 <input class="form-check-input" type="checkbox"   id="defaultCheck2" for="Marka" val="elnur">
+                                 <input class="form-check-input" type="checkbox"   name="brands"   id="defaultCheck2" for="Marka" val="elnur">
                                  elnur
                               </label>
                            </div>
                            <div class="form-check-mobile">
                               <label class="form-check-label checkboxTop" >
-                                 <input class="form-check-input" type="checkbox"  id="defaultCheck3" for="Marka" val="ahmet">
+                                 <input class="form-check-input" type="checkbox"   name="brands"  id="defaultCheck3" for="Marka" val="ahmet">
                                  ahmet
                               </label>
                            </div>
                            <div class="form-check-mobile">
                               <label class="form-check-label checkboxTop" >
-                                 <input class="form-check-input" type="checkbox"   id="defaultCheck4" for="Marka" val="seda">   
+                                 <input class="form-check-input" type="checkbox"   name="brands"   id="defaultCheck4" for="Marka" val="seda">   
                                  seda
                               </label>
                            </div>
                            <div class="form-check-mobile">
                               <label class="form-check-label checkboxTop" >
-                                 <input class="form-check-input" type="checkbox"   id="defaultCheck4" for="Marka" val="hades">
+                                 <input class="form-check-input" type="checkbox"   name="brands"   id="defaultCheck4" for="Marka" val="hades">
                                  hades
                               </label>
                            </div>
                            <div class="form-check-mobile">
                               <label class="form-check-label checkboxTop" >
-                                 <input class="form-check-input" type="checkbox"   id="defaultCheck2" for="Marka" val="elnur">
+                                 <input class="form-check-input" type="checkbox"   name="brands"   id="defaultCheck2" for="Marka" val="elnur">
                                  elnur
                               </label>
                            </div>
                            <div class="form-check-mobile">
                               <label class="form-check-label checkboxTop" >
-                                 <input class="form-check-input" type="checkbox"  id="defaultCheck3" for="Marka" val="ahmet">
+                                 <input class="form-check-input" type="checkbox"   name="brands"  id="defaultCheck3" for="Marka" val="ahmet">
                                  ahmet
                               </label>
                            </div>
                            <div class="form-check-mobile">
                               <label class="form-check-label checkboxTop" >
-                                 <input class="form-check-input" type="checkbox"   id="defaultCheck4" for="Marka" val="seda">   
+                                 <input class="form-check-input" type="checkbox"   name="brands"   id="defaultCheck4" for="Marka" val="seda">   
                                  seda
                               </label>
                            </div>
                            <div class="form-check-mobile">
                               <label class="form-check-label checkboxTop" >
-                                 <input class="form-check-input" type="checkbox"   id="defaultCheck4" for="Marka" val="hades">
+                                 <input class="form-check-input" type="checkbox"  name="brands"   id="defaultCheck4" for="Marka" val="hades">
                                  hades
                               </label>
                            </div>
-   
+                           </div>
+                        <div class="mobile-sub-menu-in-modal-okey-btn updatelabel"  >
+                           <a class="btn btn-primary btn-block ">Choise</a>
+                        </div>
+                     </div>
+                     
+                  </div>
+
+
+                  <div class="mobile-filter-in-modal-title">
+                     Price
+                     <i class="fas fa-chevron-right float-right mt-1"></i> 
+                      <span class="choise-mobile-price"> </span>
+                     
+                     <div class="mobile-sub-menu-in-modal">
+                        
+                        <div class="modal-header pt-0 px-0">
+                           <h5 class="modal-title" id="exampleModalLongTitle">Price</h5>
+                           <a href="javascript:;" class="float-right closeSubProd" >
+                              <i class="fas fa-times"></i>
+                           </a>
+                         </div>
+                         <div class="d-flex mb-1  flex-wrap my-4">
+                           
+                           <div class="  px-1 px-md-1    px-md-0 px-lg-0 col-6 col-md-4 col-lg-4 col-sm-6  ">                      
+                              <input type="text" placeholder="Min"  id="min_price" class="priceinput minPrice">
+                           </div>
+                           <div class=" px-1 px-md-1 px-lg-1  px-md-0 px-lg-0 col-6 col-md-4 col-lg-4 col-sm-6 ">
+                              <input type="text" placeholder="Max" id="max_price"   class="priceinput maxPrice">
+                           </div>
+                        
+                           <div style="margin-top: 25px; width: 100%;">
+                              <div id="slider-range" maxVal="5000" class="price-filter-range" name="rangeInput"></div>
+                           </div>
+                         
+                        </div>
+                        <div class="overflow-auto w-100 border-bottom py-1 " style="height: 100%;">
+                           <div class="form-check-mobile">
+                              <label class="form-check-label " >
+                              <input class="form-check-input amountCheck" type="checkbox" name="amount"  for="Fiyat"  valmin="0" valmax="25">
+                              0 - 25 TL 
+                              <span>(12)</span>
+                              </label>    
+                           </div>
+                           <div class="form-check-mobile">
+                              <label class="form-check-label " >
+                              <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="25" valmax="50">
+                              25 - 50 TL 
+                              <span>(2)</span>
+                              </label>
+                           </div>
+                           <div class="form-check-mobile">
+                              <label class="form-check-label " >
+                              <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat"  valmin="50" valmax="250">
+                              50 - 100 TL 
+                              <span>(1)</span>
+                              </label>
+                           </div>
+                           <div class="form-check-mobile">
+                              <label class="form-check-label " >
+                              <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="250" valmax="500">
+                              250 - 500 TL 
+                              <span>(5)</span>
+                              </label>
+                           </div>
+                           <div class="form-check-mobile">
+                              <label class="form-check-label " >
+                              <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="500" valmax="1000">
+                              500 - 1000 TL 
+                              <span>(5)</span>
+                              </label>
+                           </div>
+                           <div class="form-check-mobile">
+                              <label class="form-check-label " >
+                              <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="1000" valmax="1500">
+                              1000 - 1500 TL 
+                              <span>(5)</span>
+                              </label>
+                           </div>
+                           <div class="form-check-mobile">
+                              <label class="form-check-label " >
+                              <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="1500" valmax="2500">
+                              1500 - 2500 TL 
+                              <span>(5)</span>
+                              </label>
+                           </div>
+                           <div class="form-check-mobile">
+                              <label class="form-check-label " >
+                              <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="2500" valmax="4000">
+                              2500 - 4000 TL 
+                              <span>(5)</span>
+                              </label>
+                           </div>
+                           <div class="form-check-mobile">
+                              <label class="form-check-label " >
+                              <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="4000" valmax="6000">
+                              4000 - 6000 TL 
+                              <span>(5)</span>
+                              </label>
+                           </div>
+                           <div class="form-check-mobile">
+                              <label class="form-check-label " >
+                              <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="6000" valmax="7500">
+                              6000 - 7500 TL 
+                              <span>(5)</span>
+                              </label>
+                           </div>
+                           <div class="form-check-mobile">
+                              <label class="form-check-label " >
+                              <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="7500" valmax="10000">
+                              7500 - 10000 TL 
+                              <span>(5)</span>
+                              </label>
+                           </div>
                            
                         </div>
-                        <div class="mobile-sub-menu-in-modal-okey-btn">
-                           <a class="btn btn-primary btn-block">Choise</a>
+                        
+                        <div class="mobile-sub-menu-in-modal-okey-btn updatelabel  pricebutton"  for="Fiyat" >
+                           <a class="btn btn-primary btn-block " >Choise</a>
                         </div>
                      </div>
-
+                     
                   </div>
 
-                     <div style="clear: both;"></div>
+
+               
+
+                  <div class="mobile-filter-in-modal-title">
+                     Rating
+                     <i class="fas fa-chevron-right float-right mt-1"></i> 
+                      <span class="choise-mobile-star"> </span>
+                     
+                     <div class="mobile-sub-menu-in-modal"> 
+
+                        <div class="modal-header pt-0 px-0">
+                           <h5 class="modal-title" id="exampleModalLongTitle">Rating</h5>
+                           <a href="javascript:;" class="float-right closeSubProd" >
+                              <i class="fas fa-times"></i>
+                           </a>
+                         </div>
+
+ 
+                        <div class="d-flex flex-row">
+
+                           <div class="d-flex flex-column w-100">
+                              <div class="divofformcheck">
+                                 <div class="form-check-mobile">
+                                    <label class="form-check-label " >
+                                    <input class="form-check-input starCheck" type="checkbox" name="starrate"  for="Yıldız" val="5">
+                                    <img src="assets/images/PlayIcon.svg" alt=''>
+                                    <img src="assets/images/PlayIcon.svg" alt=''>
+                                    <img src="assets/images/PlayIcon.svg" alt=''>
+                                    <img src="assets/images/PlayIcon.svg" alt=''>
+                                    <img src="assets/images/PlayIcon.svg" alt=''>
+                                    <span>(5)</span>
+                                    </label>
+                                 </div>
+                                 <div class="form-check-mobile">
+                                    <label class="form-check-label " >
+                                    <input class="form-check-input starCheck" type="checkbox" name="starrate"  for="Yıldız" val="4">
+                                    <img src="assets/images/PlayIcon.svg" alt=''>
+                                    <img src="assets/images/PlayIcon.svg" alt=''>
+                                    <img src="assets/images/PlayIcon.svg" alt=''>
+                                    <img src="assets/images/PlayIcon.svg" alt=''>
+                                    <img src="assets/images/PlayIcon2.svg" alt=''>
+                                    <span>(5)</span>
+                                    </label>
+                                 </div>
+                                 <div class="form-check-mobile">
+                                    <label class="form-check-label " >
+                                    <input class="form-check-input starCheck" type="checkbox" name="starrate"  for="Yıldız" val="3">
+                                    <img src="assets/images/PlayIcon.svg" alt=''>
+                                    <img src="assets/images/PlayIcon.svg" alt=''>
+                                    <img src="assets/images/PlayIcon.svg" alt=''>
+                                    <img src="assets/images/PlayIcon2.svg" alt=''>
+                                    <img src="assets/images/PlayIcon2.svg" alt=''>
+                                    <span>(5)</span>
+                                    </label>
+                                 </div>
+                                 <div class="form-check-mobile">
+                                    <label class="form-check-label " >
+                                    <input class="form-check-input starCheck" type="checkbox" name="starrate"  for="Yıldız" val="2">
+                                    <img src="assets/images/PlayIcon.svg" alt=''>
+                                    <img src="assets/images/PlayIcon.svg" alt=''>
+                                    <img src="assets/images/PlayIcon2.svg" alt=''>
+                                    <img src="assets/images/PlayIcon2.svg" alt=''>
+                                    <img src="assets/images/PlayIcon2.svg" alt=''>
+                                    <span>(5)</span>
+                                    </label>
+                                 </div>
+                                 <div class="form-check-mobile">
+                                    <label class="form-check-label " >
+                                    <input class="form-check-input starCheck" type="checkbox" name="starrate"  for="Yıldız" val="1">
+                                    <img src="assets/images/PlayIcon.svg" alt=''>
+                                    <img src="assets/images/PlayIcon2.svg" alt=''>
+                                    <img src="assets/images/PlayIcon2.svg" alt=''>
+                                    <img src="assets/images/PlayIcon2.svg" alt=''>
+                                    <img src="assets/images/PlayIcon2.svg" alt=''>
+                                    <span>(5)</span>
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="mobile-sub-menu-in-modal-okey-btn updatelabel"  >
+                           <a class="btn btn-primary btn-block  ">Choise</a>
+                        </div>
+                     </div>
+                     
+                  </div>
+
+                   
                   
-                  <div class="d-flex mb-1  flex-wrap">
-                     <span class="mt-4 mb-1 w-100 font-weight-bold	  ">Price</span>
-                     <div class="  px-1 px-md-1    px-md-0 px-lg-0 col-6 col-md-4 col-lg-4 col-sm-6  ">                      
-                        <input type="text" placeholder="Min" id="minPrice" class="priceinput ">
-                     </div>
-                     <div class=" px-1 px-md-1 px-lg-1  px-md-0 px-lg-0 col-6 col-md-4 col-lg-4 col-sm-6 ">
-                        <input type="text" placeholder="Max" id="maxPrice" class="priceinput ">
-                     </div>
-                     <div class="px-1 px-md-1 px-lg-1  px-md-0 px-lg-0 col-12 col-md-4 col-lg-4 col-sm-12  mt-1 mt-md-0">
-                        <button class="pricebutton " id="pricebutton" >
-                        <span class="updatelabel"> Update</span>
-                        </button>
-                     </div>
-                  </div>
-                  <div class="overflow-auto w-100 border-bottom py-1 " style="height: 140px;">
-                     <div class="form-check">
-                        <label class="form-check-label " >
-                        <input class="form-check-input amountCheck" type="checkbox" name="amount"  for="Fiyat"  valmin="0" valmax="25">
-                        0 - 25 TL 
-                        <span>(12)</span>
-                        </label>    
-                     </div>
-                     <div class="form-check">
-                        <label class="form-check-label " >
-                        <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="25" valmax="50">
-                        25 - 50 TL 
-                        <span>(2)</span>
-                        </label>
-                     </div>
-                     <div class="form-check">
-                        <label class="form-check-label " >
-                        <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat"  valmin="50" valmax="250">
-                        50 - 100 TL 
-                        <span>(1)</span>
-                        </label>
-                     </div>
-                     <div class="form-check">
-                        <label class="form-check-label " >
-                        <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="250" valmax="500">
-                        250 - 500 TL 
-                        <span>(5)</span>
-                        </label>
-                     </div>
-                     <div class="form-check">
-                        <label class="form-check-label " >
-                        <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="500" valmax="1000">
-                        500 - 1000 TL 
-                        <span>(5)</span>
-                        </label>
-                     </div>
-                     <div class="form-check">
-                        <label class="form-check-label " >
-                        <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="1000" valmax="1500">
-                        1000 - 1500 TL 
-                        <span>(5)</span>
-                        </label>
-                     </div>
-                     <div class="form-check">
-                        <label class="form-check-label " >
-                        <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="1500" valmax="2500">
-                        1500 - 2500 TL 
-                        <span>(5)</span>
-                        </label>
-                     </div>
-                     <div class="form-check">
-                        <label class="form-check-label " >
-                        <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="2500" valmax="4000">
-                        2500 - 4000 TL 
-                        <span>(5)</span>
-                        </label>
-                     </div>
-                     <div class="form-check">
-                        <label class="form-check-label " >
-                        <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="4000" valmax="6000">
-                        4000 - 6000 TL 
-                        <span>(5)</span>
-                        </label>
-                     </div>
-                     <div class="form-check">
-                        <label class="form-check-label " >
-                        <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="6000" valmax="7500">
-                        6000 - 7500 TL 
-                        <span>(5)</span>
-                        </label>
-                     </div>
-                     <div class="form-check">
-                        <label class="form-check-label " >
-                        <input class="form-check-input amountCheck" type="checkbox" name="amount"   for="Fiyat" valmin="7500" valmax="10000">
-                        7500 - 10000 TL 
-                        <span>(5)</span>
-                        </label>
-                     </div>
-                  </div>
-                  <div class=" mt-4 font-weight-bold	  ">
-                     <span >Rating</span>
-                  </div>
-                  <div class="d-flex flex-row">
-                     <div class="d-flex flex-column">
-                        <div class="divofformcheck">
-                           <div class="form-check">
-                              <label class="form-check-label " >
-                              <input class="form-check-input starCheck" type="checkbox" name="starrate"  for="Yıldız" val="5">
-                              <img src="assets/images/PlayIcon.svg" alt=''>
-                              <img src="assets/images/PlayIcon.svg" alt=''>
-                              <img src="assets/images/PlayIcon.svg" alt=''>
-                              <img src="assets/images/PlayIcon.svg" alt=''>
-                              <img src="assets/images/PlayIcon.svg" alt=''>
-                              <span>(5)</span>
-                              </label>
-                           </div>
-                           <div class="form-check">
-                              <label class="form-check-label " >
-                              <input class="form-check-input starCheck" type="checkbox" name="starrate"  for="Yıldız" val="4">
-                              <img src="assets/images/PlayIcon.svg" alt=''>
-                              <img src="assets/images/PlayIcon.svg" alt=''>
-                              <img src="assets/images/PlayIcon.svg" alt=''>
-                              <img src="assets/images/PlayIcon.svg" alt=''>
-                              <img src="assets/images/PlayIcon2.svg" alt=''>
-                              <span>(5)</span>
-                              </label>
-                           </div>
-                           <div class="form-check">
-                              <label class="form-check-label " >
-                              <input class="form-check-input starCheck" type="checkbox" name="starrate"  for="Yıldız" val="3">
-                              <img src="assets/images/PlayIcon.svg" alt=''>
-                              <img src="assets/images/PlayIcon.svg" alt=''>
-                              <img src="assets/images/PlayIcon.svg" alt=''>
-                              <img src="assets/images/PlayIcon2.svg" alt=''>
-                              <img src="assets/images/PlayIcon2.svg" alt=''>
-                              <span>(5)</span>
-                              </label>
-                           </div>
-                           <div class="form-check">
-                              <label class="form-check-label " >
-                              <input class="form-check-input starCheck" type="checkbox" name="starrate"  for="Yıldız" val="2">
-                              <img src="assets/images/PlayIcon.svg" alt=''>
-                              <img src="assets/images/PlayIcon.svg" alt=''>
-                              <img src="assets/images/PlayIcon2.svg" alt=''>
-                              <img src="assets/images/PlayIcon2.svg" alt=''>
-                              <img src="assets/images/PlayIcon2.svg" alt=''>
-                              <span>(5)</span>
-                              </label>
-                           </div>
-                           <div class="form-check">
-                              <label class="form-check-label " >
-                              <input class="form-check-input starCheck" type="checkbox" name="starrate"  for="Yıldız" val="1">
-                              <img src="assets/images/PlayIcon.svg" alt=''>
-                              <img src="assets/images/PlayIcon2.svg" alt=''>
-                              <img src="assets/images/PlayIcon2.svg" alt=''>
-                              <img src="assets/images/PlayIcon2.svg" alt=''>
-                              <img src="assets/images/PlayIcon2.svg" alt=''>
-                              <span>(5)</span>
-                              </label>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+                  
+                  
                </div>
             </div>
             <div class="modal-footer">
@@ -1409,26 +1459,69 @@
 
 
    <script src="assets/dist/js/jquery.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+   <script type="text/javascript"  src="assets/dist/range/price_range_script.js"></script>
+   
    <script src="assets/dist/bootstrap/js/bootstrap.bundle.min.js"></script>
+   
    <script type="text/javascript" src="assets/dist/slick/slick.min.js"></script>
    <script src="assets/dist/css/fontawesome/js/all.js"></script>
 
    <script src="assets/dist/js/headroom.js"></script>
 
+
+
+
    <script src="assets/dist/js/script.js"></script>
- 
+     
    <script>
 
       $(document).ready(function () {
           
-         $(".mobile-filter-in-modal-title").click(function(){
-            $('.mobile-sub-menu-in-modal').toggle()
+         $(".mobile-filter-in-modal-title").click(function(e){
+
+            $(this).find('.mobile-sub-menu-in-modal').show();
+            
+          });
+
+          $(".mobile-sub-menu-in-modal-okey-btn").click(function(e){
+            e.stopImmediatePropagation();
+            $(".mobile-sub-menu-in-modal").hide()
+            
          });
 
-         $(".mobile-sub-menu-in-modal-okey-btn").click(function(){
-            console.log("sdasds")
+         $(".closeSubProd").click(function(e){
+            e.stopImmediatePropagation();
+            $(".mobile-sub-menu-in-modal").hide()
+            
          });
-    
+
+         
+
+
+         const priceMaxVal= $('#slider-range').attr("maxVal");
+         
+         $("#slider-range").slider({
+            range: true,
+            orientation: "horizontal",
+            min: 0,
+            max: priceMaxVal,
+            values: [0, priceMaxVal],
+            step: 50,
+
+            slide: function (event, ui) {
+                if (ui.values[0] == ui.values[1]) {
+                    return false;
+                }
+
+                $("#min_price").val(ui.values[0]);
+                $("#max_price").val(ui.values[1]);
+            },
+        });
+
+        $("#min_price").val($("#slider-range").slider("values", 0));
+        $("#max_price").val($("#slider-range").slider("values", 1));
+
    
          
    });

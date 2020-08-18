@@ -812,15 +812,26 @@
 }
 
 @media screen and (max-width: 768px) {
+    .priceinput {
+        text-align: center;
+        height: 50px;
+    }
     .mobile-filter-in-modal-title {
         padding: 20px 0px 20px 0px;
         width: 100%;
         float: left;
         font-weight: bold;
-        span {
+        span.choise-mobile-brand,
+        span.choise-mobile-price,
+        span.choise-mobile-star {
             font-weight: normal;
             font-size: 10pt;
             color: #ccc;
+            width: 100%;
+            float: left;
+            span {
+                margin-right: 5px;
+            }
         }
         .mobile-sub-menu-in-modal {
             top: 0;
@@ -841,13 +852,18 @@
                     float: left;
                     width: 100%;
                     padding: 15px 5px;
+                    font-weight: normal;
+                    font-size: 12pt;
 
                     .form-check-input {
                         float: right;
                         position: inherit;
+                        width: 20px;
+                        height: 20px;
                     }
 
-                    &:hover {
+                    &:hover,
+                    &.active {
                         background: #cccccc17;
                     }
                 }
@@ -860,9 +876,28 @@
             position: fixed;
             width: 100%;
             height: 50px;
+            background: none;
+            border: 0;
+            .btn {
+                width: 100%;
+                height: 36px;
+                background-color: #00bfd6;
+                border: solid rgba(0, 0, 0, 0);
+                border-radius: 0px;
+                padding: 0;
+            }
         }
     }
-
+    .closeSubProd {
+        color: #000000;
+        margin-right: 10px;
+    }
+    #modalFilter {
+        padding-right: 0 !important;
+    }
+    #modalFilter .modal-content {
+        border-radius: 0;
+    }
     .mobileOpenFilter {
         display: none;
     }

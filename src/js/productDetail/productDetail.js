@@ -67,39 +67,47 @@ $(document).ready(function () {
 var sayac = 0;
 
 $(".pricebutton").click(function () {
-    $(".resetfilterslong").css("display", "flex");
-    const topTitle = $(this).attr("id");
-    const category = $(this).attr("for");
-    const whyCat = $(this).attr("name");
+    if ($(window).width() < 768) {
+        const valmin = $("#min_price").val();
+        const valmax = $("#max_price").val();
+        $(".choise-mobile-price").text("");
+        $(".choise-mobile-price").append(
+            "<span>" + valmin + " - " + valmax + " TL</span>"
+        );
+    } else {
+        $(".resetfilterslong").css("display", "flex");
+        const topTitle = $(this).attr("id");
+        const category = $(this).attr("for");
 
-    let text = $(this).attr("val");
-    const topId = topTitle.replace("cb", "");
-    let addClassAmount = "";
+        let text = $(this).attr("val");
+        const topId = topTitle.replace("cb", "");
+        let addClassAmount = "";
 
-    const valmin = $("#minPrice").val();
-    const valmax = $("#maxPrice").val();
-    text = valmin + " - " + valmax + " TL";
+        const valmin = $(".minPrice").val();
+        const valmax = $(".maxPrice").val();
+        text = valmin + " - " + valmax + " TL";
 
-    $(".amountCheckTopBar").remove();
-    $(".amountCheck").prop("checked", false);
-    addClassAmount = "amountCheckTopBar";
+        $(".amountCheckTopBar").remove();
+        $(".amountCheck").prop("checked", false);
+        addClassAmount = "amountCheckTopBar";
 
-    $("#longrow").append(
-        ' <div class="d-flex flex-row filteredlabels ' +
-            addClassAmount +
-            '" id="ns' +
-            topId +
-            '"><div class="d-flex flex-column p-3 justify-content-center"><div class="text1" >' +
-            category +
-            "</div> <div class=text2>" +
-            text +
-            '</div> </div><div style="border-left: solid 0.5px #c9c9c9;"><a style="cursor: pointer;" class="close-icon" id="ns' +
-            topId +
-            '"  onclick="myFunction(\'' +
-            "ns" +
-            topId +
-            '\')"><i class="fas fa-times-circle"></i></a> </div></div>'
-    );
+        $("#longrow").append(
+            ' <div class="d-flex flex-row filteredlabels ' +
+                addClassAmount +
+                '" id="ns' +
+                topId +
+                '"><div class="d-flex flex-column p-3 justify-content-center"><div class="text1" >' +
+                category +
+                "</div> <div class=text2>" +
+                text +
+                '</div> </div><div style="border-left: solid 0.5px #c9c9c9;"><a style="cursor: pointer;" class="close-icon" id="ns' +
+                topId +
+                '"  onclick="myFunction(\'' +
+                "ns" +
+                topId +
+                '\')"><i class="fas fa-times-circle"></i></a> </div></div>'
+        );
+    }
 });
 
 $(".form-check-input").click(function () {
@@ -119,8 +127,8 @@ $(".form-check-input").click(function () {
             const valmin = $(this).attr("valmin");
             const valmax = $(this).attr("valmax");
             text = valmin + " - " + valmax + " TL";
-            $("#minPrice").val(valmin);
-            $("#maxPrice").val(valmax);
+            $(".minPrice").val(valmin);
+            $(".maxPrice").val(valmax);
 
             $(".amountCheckTopBar").remove();
             $(".amountCheck").prop("checked", false);
@@ -139,27 +147,49 @@ $(".form-check-input").click(function () {
         }
 
         sayac = sayac + 1;
-        $("#longrow").append(
-            ' <div class="d-flex flex-row filteredlabels ' +
-                addClassAmount +
-                '" id="ns' +
-                topId +
-                '"><div class="d-flex flex-column p-3 justify-content-center"><div class="text1" >' +
-                category +
-                "</div> <div class=text2>" +
-                text +
-                '</div> </div><div style="border-left: solid 0.5px #c9c9c9;"><a style="cursor: pointer;" class="close-icon" id="ns' +
-                topId +
-                '"  onclick="myFunction(\'' +
-                "ns" +
-                topId +
-                '\')"><i class="fas fa-times-circle"></i></a> </div></div>'
-        );
+        if ($(window).width() < 768) {
+            if (whyCat == "brands") {
+                $(".choise-mobile-brand").append(
+                    "<span id='ns" + topId + "' >" + text + "</span>"
+                );
+            }
 
+            if (whyCat == "amount") {
+                $(".choise-mobile-price").text("");
+                $(".choise-mobile-price").append(
+                    "<span id='ns" + topId + "' >" + text + "</span>"
+                );
+            }
+
+            if (whyCat == "starrate") {
+                $(".choise-mobile-star").text("");
+
+                $(".choise-mobile-star").append(
+                    "<span id='ns" + topId + "' >" + text + "</span>"
+                );
+            }
+        } else {
+            $("#longrow").append(
+                ' <div class="d-flex flex-row filteredlabels ' +
+                    addClassAmount +
+                    '" id="ns' +
+                    topId +
+                    '"><div class="d-flex flex-column p-3 justify-content-center"><div class="text1" >' +
+                    category +
+                    "</div> <div class=text2>" +
+                    text +
+                    '</div> </div><div style="border-left: solid 0.5px #c9c9c9;"><a style="cursor: pointer;" class="close-icon" id="ns' +
+                    topId +
+                    '"  onclick="myFunction(\'' +
+                    "ns" +
+                    topId +
+                    '\')"><i class="fas fa-times-circle"></i></a> </div></div>'
+            );
+        }
         $(this).prop("checked", true);
     } else {
-        console.log("sdsd");
         $("#ns" + topId).remove();
+        console.log(topId);
         sayac = sayac - 1;
         var a = $(".filteredlabels").length;
         console.log("a nin degeri ", a);
