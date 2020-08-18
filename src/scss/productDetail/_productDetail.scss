@@ -811,6 +811,9 @@
     transform: translateY(-100%);
 }
 
+.lb-details {
+    display: none !important    ;
+}
 @media screen and (max-width: 768px) {
     .priceinput {
         text-align: center;

@@ -133,11 +133,10 @@ $(".pricebutton").click(function () {
         );
     } else {
         $(".resetfilterslong").css("display", "flex");
-        const topTitle = $(this).attr("id");
         const category = $(this).attr("for");
 
         let text = $(this).attr("val");
-        const topId = topTitle.replace("cb", "");
+        const topId = 0;
         let addClassAmount = "";
 
         const valmin = $(".minPrice").val();
@@ -453,7 +452,7 @@ $(".dingleSlider").slick({
     ],
 });
 
-$(".sliderThumbnail").click(function () {
+$(".sliderThumbnail").hover(function () {
     var thumbImage = $("img", this).attr("data-img");
     $(".sliderMain a.productIMG > img").attr("src", thumbImage);
     $(".sliderMain a.productIMG  ").attr("href", thumbImage);
