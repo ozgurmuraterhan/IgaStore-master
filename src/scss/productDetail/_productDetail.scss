@@ -832,7 +832,7 @@
             z-index: 99;
             padding: 15px 0px;
             width: 100%;
-
+            box-shadow: 0px 0px 4px 0px #000;
             .btn-dark {
                 background: #00bfd6;
                 border: none;
@@ -840,12 +840,22 @@
             }
         }
     }
-    #productDetailContent .count-up {
+    #productDetailContent .count-up-2 {
         height: 36px;
+        width: 40px;
+        border: solid 0.5px #c9c9c9;
+        border-left: unset;
+        background-color: #f5f5f5;
+        cursor: pointer;
     }
 
-    #productDetailContent .count-down {
+    #productDetailContent .count-down-2 {
         height: 36px;
+        width: 40px;
+        border: solid 0.5px #c9c9c9;
+        border-right: unset;
+        background-color: #f5f5f5;
+        cursor: pointer;
     }
 
     .priceinput {
