@@ -98,16 +98,61 @@ $(".filterMobileOpen").click(function () {
     $("#mobileOpenFilter").toggle("slow").focus();
 });
 $(document).ready(function () {
-    var header = document.querySelector("#headerProductFilterFixedMobil");
-
-    var headroom = new Headroom(header, {
-        tolerance: {
-            down: 5,
-            up: 5,
-        },
-        offset: 300,
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 960) {
+            $(".mobile-bag-btn-fixed-bottom-open").show();
+        } else {
+            $(".mobile-bag-btn-fixed-bottom-open").hide();
+        }
     });
-    headroom.init();
+    $(".mobile-filter-in-modal-title").click(function (e) {
+        $(this).find(".mobile-sub-menu-in-modal").show();
+    });
+
+    $(".mobile-sub-menu-in-modal-okey-btn").click(function (e) {
+        e.stopImmediatePropagation();
+        $(".mobile-sub-menu-in-modal").hide();
+    });
+
+    $(".closeSubProd").click(function (e) {
+        e.stopImmediatePropagation();
+        $(".mobile-sub-menu-in-modal").hide();
+    });
+
+    const priceMaxVal = $("#slider-range").attr("maxVal");
+    if (priceMaxVal) {
+        $("#slider-range").slider({
+            range: true,
+            orientation: "horizontal",
+            min: 0,
+            max: priceMaxVal,
+            values: [0, priceMaxVal],
+            step: 50,
+
+            slide: function (event, ui) {
+                if (ui.values[0] == ui.values[1]) {
+                    return false;
+                }
+
+                $("#min_price").val(ui.values[0]);
+                $("#max_price").val(ui.values[1]);
+            },
+        });
+
+        $("#min_price").val($("#slider-range").slider("values", 0));
+        $("#max_price").val($("#slider-range").slider("values", 1));
+    }
+    var header = document.querySelector("#headerProductFilterFixedMobil");
+    if (header) {
+        var headroom = new Headroom(header, {
+            tolerance: {
+                down: 5,
+                up: 5,
+            },
+            offset: 300,
+        });
+        headroom.init();
+    }
 
     var length = $(".form-check-input").length;
     var i = 0;
@@ -520,6 +565,7 @@ $("#btn-up").click(function () {
 // $("#thumbnailDiv").scroll(function(){
 //   $('#thumbnailDiv').animate({scrollTop:$('#thumbnailDiv').scrollTop() - 162}, 500, 'swing');
 // });
+
 document.addEventListener("DOMContentLoaded", function () {
     const ele = document.getElementById("thumbnailDiv");
     if (ele) {
